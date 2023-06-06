@@ -1,0 +1,62 @@
+.cta{
+    display: inline-block;
+    position: fixed;
+    z-index: 1;
+    bottom: 1%;
+    right: 15px;
+}
+
+.ctaIcon{
+    padding: 4px 4px;
+    border: 5px solid #D8E2DC;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    margin-top: 5px;
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.ctaPhone:hover{
+    border: 5px solid #46d4ff;
+    box-shadow: 0 0 30px #46d4ff;
+    transition: all 0.8s ease;
+}
+.ctaPhoneLink:hover{
+    color:#46d4ff;
+    transition: all 0.8s ease;
+}
+
+.ctaWhatsapp:hover{
+    border: 5px solid #23d765;
+    box-shadow: 0 0 30px #23d765;
+    transition: all 0.8s ease;
+}
+.ctaWhatsappLink:hover{
+    color:#23d765;
+    transition: all 0.8s ease;
+}
+
+.ctaInstagram:hover{
+    border: 5px solid #db71cd;
+    box-shadow: 0 0 30px #db71cd;
+    transition: all 0.8s ease;
+}
+.ctaInstagramLink:hover{
+    color:#db71cd;
+    transition: all 0.8s ease;
+}
+
+.ctaToggle:hover{
+    border: 5px solid #000;
+    box-shadow: 0 0 30px #000;
+    transition: all 0.5s ease;
+}
+
+
+.hidden{
+    opacity: 0;
+    transition: all .5s ease;
+    visibility: none;
+}

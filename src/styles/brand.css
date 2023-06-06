@@ -1,0 +1,14 @@
+.brand{
+    display: flex;
+    justify-content: center;
+}
+
+#blogo{
+    width: 10%;
+    height: auto;
+}
+
+#bname{
+    width: 15%;
+    height: auto;
+}
