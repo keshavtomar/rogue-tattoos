@@ -1,14 +1,12 @@
 import './App.css';
-import WhatsApp from './components/Whatsapp';
-import Fullscreenlogo from './components/Fullscreenlogo';
+import Home from '../src/Home'
 
 
 
 function App() {
   return (
     <div className="App">
-      <Fullscreenlogo />
-      <WhatsApp />
+      <Home />
     </div>
   );
 }
