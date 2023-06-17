@@ -1,9 +1,18 @@
 import $ from 'jquery';
 
-$(".menu-icon").on("click", function () {
-    console.log("clicked");
-    $("tav ul").toggleClass("showing");
+$(function () {
+    $(".menu-icon").on("click", function () {
+        $("tav ul").toggleClass("showing");
+    });
 });
+
+
+// $(document).on("ready", function () {
+//     $(".menu-icon").on("click", function () {
+//         console.log("clicked");
+//         $("tav ul").toggleClass("showing");
+//     });
+// });
 
 // Scrolling Effect
 

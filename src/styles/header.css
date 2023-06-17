@@ -57,6 +57,7 @@ tav ul {
 
 tav.black ul {
     background: #000;
+    z-index: 2;
 }
 
 tav ul li {
