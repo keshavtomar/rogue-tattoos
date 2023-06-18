@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: #2B2730;
 }
 
 body {
@@ -13,23 +14,39 @@ body {
 header {
     width: 100%;
     height: 100vh;
-    background: url('../../public/images/bg4.jpg') no-repeat 50% 50%;
+    background: url('../../public/images/bg6.jpg') no-repeat 50% 50%;
     background-size: cover;
+    /* filter: grayscale(100%); */
 }
 
-.content {
-    width: 94%;
+
+
+.content{
+    margin: auto;
+    width: 85%;
     margin: 4em auto;
+    text-align: center;
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
+}
+
+p,h2{
+    text-align: center;
+    color:white;
+}
+
+.glow {
+    color: rgb(41, 123, 255);
+    text-shadow: 0px 0px 30px rgb(41, 123, 255);
+    transition: all 0.2s ease-in;
 }
 
 .logo {
     line-height: 50px;
     position: fixed;
     float: left;
-    margin: 16px 46px;
+    margin: 0 46px;
     color: #fff;
     font-weight: bold;
     font-size: 20px;
@@ -38,6 +55,7 @@ header {
 
 tav {
     position: fixed;
+    z-index: 2;
     width: 100%;
     line-height: 50px;
 }
@@ -56,7 +74,7 @@ tav ul {
 }
 
 tav.black ul {
-    background: #000;
+    background: #2B2730;
     z-index: 2;
 }
 
@@ -65,16 +83,40 @@ tav ul li {
     padding: 16px 40px;
 }
 
-tav ul li a {
+
+/* to animate navbar links, as line through */
+.nav-link {
     text-decoration: none;
+    position: relative;
     color: #fff;
     font-size: 16px;
+    transition: all 2s ease;
 }
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
 
 .menu-icon {
     line-height: 50px;
     width: 100%;
-    background: #000;
+    background: #2B2730;
     text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
@@ -83,7 +125,7 @@ tav ul li a {
     display: none;
 }
 
-@media(max-width: 786px) {
+@media(max-width: 892px) {
     .logo {
         position: fixed;
         top: 0;
@@ -92,11 +134,11 @@ tav ul li a {
 
     tav ul {
         max-height: 0px;
-        background: #000;
+        background: #2B2730;
     }
 
     tav.black ul {
-        background: #000;
+        background: #2B2730;
     }
 
     .showing {

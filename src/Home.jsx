@@ -4,6 +4,7 @@ import WhatsApp from './components/Whatsapp';
 import '../src/styles/home.css'
 import Loader from './components/Loader';
 import Header from './components/Header';
+import Counter from './components/Counter';
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Loader />
             <WhatsApp />
             <Header />
+            <Counter />
         </div>
     )
 }

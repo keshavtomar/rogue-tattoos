@@ -60,5 +60,9 @@
 
 .hidden{
     opacity: 0;
-    visibility: none;
+    transition: all 0.7s ease;
+}
+
+.vanished{
+    display: none;
 }

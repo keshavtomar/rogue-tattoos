@@ -1,0 +1,100 @@
+import React, { useEffect, useRef } from 'react';
+import '../styles/counter.css'
+import '../scripts/counter'
+import DrawIcon from '@mui/icons-material/Draw';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import MoodIcon from '@mui/icons-material/Mood';
+import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
+
+// for every class I have used cbefore it, to distinguish that it's a counter class
+
+function ScrollIntoViewTrigger({ onScrollIntoView }) {
+    const targetRef = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                onScrollIntoView(); // Call your function or perform your desired actions here
+                observer.unobserve(entry.target); // Stop observing the element after it is in view (optional)
+            }
+        }, options);
+
+        if (targetRef.current) {
+            observer.observe(targetRef.current);
+        }
+
+        return () => {
+            if (targetRef.current) {
+                observer.unobserve(targetRef.current);
+            }
+        };
+    }, [onScrollIntoView]);
+
+    return <div ref={targetRef} />;
+}
+
+export default function Counter() {
+
+
+    const showValues = () => {
+        let valueDisplays = document.querySelectorAll(".cnum");
+
+        let interval = 1500;
+
+        // console.log(valueDisplays);
+
+        valueDisplays.forEach((valueDisplay, index) => {
+            let startValue = 0;
+            let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+            console.log(endValue);
+            let duration = Math.floor(interval / endValue);
+            let coounter = setInterval(function () {
+
+                startValue += 1;
+
+                valueDisplay.textContent = startValue;
+                if (startValue === endValue) {
+                    startValue += '+';
+                    clearInterval(coounter);
+                }
+            }, duration);
+        })
+    }
+
+
+
+    return (
+        <div className='counter'>
+            <h2><span className='line-pass'>Achievements</span></h2>
+            <div onScrollIntoView={showValues} className='cwrapper'>
+                <div className='ccontainer'>
+                    <DrawIcon className='ci' fontSize='large' />
+                    <span className='cnum' data-val='1500'>0</span>
+                    <span className='ctext'>Inked tattoos</span>
+                </div>
+                <div className='ccontainer'>
+                    <MoodIcon className='ci' fontSize='large' />
+                    <span className='cnum' data-val='1200'>0</span>
+                    <span className='ctext'>Happy Customers</span>
+                </div>
+                <div className='ccontainer'>
+                    <StarBorderPurple500Icon className='ci' fontSize='large' />
+                    <span className='cnum' data-val='130'>0</span>
+                    <span className='ctext'>5 ★ Ratings on Google</span>
+                </div>
+                <div className='ccontainer'>
+                    <AccessTimeIcon className='ci' fontSize='large' />
+                    <span className='cnum' data-val='6'>0</span>
+                    <span className='ctext'>Years of Experience</span>
+                </div>
+            </div>
+            <ScrollIntoViewTrigger onScrollIntoView={showValues} />
+        </div>
+    )
+}
