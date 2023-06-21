@@ -6,6 +6,7 @@ import Loader from './components/Loader';
 import Header from './components/Header';
 import Counter from './components/Counter';
 import Contact from './components/Contact';
+import Review from './components/Reviews';
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <WhatsApp />
             <Header />
             <Counter />
+            <Review />
             <Contact />
         </div>
     )

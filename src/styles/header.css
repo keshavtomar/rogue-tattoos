@@ -162,7 +162,7 @@ tav ul li {
 /* hidden and show classes flying text */
 .fly-hidden{
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(50%);
     transition: all 1.5s;
 }
 
