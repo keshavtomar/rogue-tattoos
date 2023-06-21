@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/header.css'
-import '../scripts/header'
 import MenuIcon from '@mui/icons-material/Menu';
 import Brand from './Brand';
 import aboutUs from '../data/content.jsx'
@@ -16,6 +15,44 @@ export default function Header() {
             setisOpen(false);
         }
     }
+
+    const handleScroll = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        const tabElement = document.querySelector('tav');
+
+        if (tabElement) {
+            if (scrollTop > 0) {
+                tabElement.classList.add('black');
+            } else {
+                tabElement.classList.remove('black');
+            }
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            console.log("Working");
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fly-show');
+                } else {
+                    entry.target.classList.remove('fly-show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.fly-hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        // Clean up the observer when the component unmounts
+        return () => {
+            hiddenElements.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
 
     return (
         <div className="wrapper">
@@ -38,19 +75,21 @@ export default function Header() {
                     </div>
                 </tav>
             </header>
+            <hr className='horizontal-row' />
             <div className="content">
                 <h2>
                     <span className='line-pass'>
                         About Us
                     </span>
                 </h2>
-                <p>
+                <p className='fly-hidden'>
                     {aboutUs[0]}
                 </p>
-                <p>
+                <p className='fly-hidden'>
                     {aboutUs[1]}
                 </p>
             </div>
+            <hr className='horizontal-row' />
         </div>
     )
 }

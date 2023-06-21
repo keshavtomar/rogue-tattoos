@@ -2,34 +2,47 @@ import React, { useState } from 'react'
 import { Link, Tooltip } from '@mui/material';
 import { PhoneInTalk, WhatsApp, Instagram, Close, CropSquare } from '@mui/icons-material';
 import '../styles/cta.css'
-import '../scripts/cta'
 
 
 export default function Whatsapp() {
     const [expand, setexpand] = useState(true);
 
-    function handleExpand() {
-        if (expand === true) {
-            setexpand(false);
+    const hideall = () => {
+        const el = document.querySelector('#x');
 
-        }
-        else {
-            setexpand(true);
+        if (el) {
+            el.addEventListener('transitionend', () => {
+                el.classList.add('non-display');
+            });
         }
     }
 
-    // const el = document.querySelector('.hidden');
+    const showall = () => {
+        const el = document.querySelector('#x');
 
-    // if (el) {
-    //     el.addEventListener('transitionend', () => {
-    //         el.classList.add('vanished');
-    //     });
-    // }
+        if (el) {
+            el.addEventListener('transitionend', () => {
+                el.classList.remove('non-display');
+            });
+        }
+    }
+
+    function handleExpand() {
+        if (expand === true) {
+            setexpand(false);
+            hideall();
+        }
+        else {
+            setexpand(true);
+            showall();
+        }
+    }
+
 
 
     return (
         <div className='cta'>
-            <div className={expand ? '' : 'hidden'}>
+            <div id='x' className={expand ? '' : 'cta-hidden'}>
                 <div className='ctaIcon ctaPhone'>
                     <Tooltip title="Call" placement='left' arrow>
                         <Link className='cta-phone-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><PhoneInTalk /></Link>

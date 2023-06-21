@@ -40,5 +40,24 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 </body>
+<script>
+  // JavaScript code
+  const observer = new IntersectionObserver((entries) => {
+    console.log("Working");
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fly-show');
+      } else {
+        entry.target.classList.remove('fly-show');
+      }
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    // Run code only when the DOM content is loaded
+    const hiddenElements = document.querySelectorAll('.fly-hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+  });
+</script>
 
 </html>

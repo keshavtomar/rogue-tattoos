@@ -157,3 +157,16 @@ tav ul li {
     }
 
 }
+
+
+/* hidden and show classes flying text */
+.fly-hidden{
+    opacity: 0;
+    transform: translateY(30%);
+    transition: all 1.5s;
+}
+
+.fly-show{
+    opacity: 1;
+    transform: translateY(0);
+}

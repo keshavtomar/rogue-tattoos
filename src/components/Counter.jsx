@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/counter.css'
-import '../scripts/counter'
 import DrawIcon from '@mui/icons-material/Draw';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import MoodIcon from '@mui/icons-material/Mood';
@@ -73,28 +72,29 @@ export default function Counter() {
         <div className='counter'>
             <h2><span className='line-pass'>Achievements</span></h2>
             <div onScrollIntoView={showValues} className='cwrapper'>
-                <div className='ccontainer'>
+                <div className='ccontainer fly-hidden'>
                     <DrawIcon className='ci' fontSize='large' />
                     <span className='cnum' data-val='1500'>0</span>
                     <span className='ctext'>Inked tattoos</span>
                 </div>
-                <div className='ccontainer'>
+                <div className='ccontainer fly-hidden'>
                     <MoodIcon className='ci' fontSize='large' />
                     <span className='cnum' data-val='1200'>0</span>
                     <span className='ctext'>Happy Customers</span>
                 </div>
-                <div className='ccontainer'>
+                <div className='ccontainer fly-hidden'>
                     <StarBorderPurple500Icon className='ci' fontSize='large' />
                     <span className='cnum' data-val='130'>0</span>
                     <span className='ctext'>5 ★ Ratings on Google</span>
                 </div>
-                <div className='ccontainer'>
+                <div className='ccontainer fly-hidden'>
                     <AccessTimeIcon className='ci' fontSize='large' />
                     <span className='cnum' data-val='6'>0</span>
                     <span className='ctext'>Years of Experience</span>
                 </div>
             </div>
             <ScrollIntoViewTrigger onScrollIntoView={showValues} />
+            <hr className='horizontal-row' />
         </div>
     )
 }
