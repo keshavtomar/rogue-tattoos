@@ -7,6 +7,7 @@ import aboutUs from '../data/content.jsx'
 export default function Header() {
     const [isOpen, setisOpen] = useState(false);
 
+
     const handleClick = () => {
         if (isOpen === false) {
             setisOpen(true);
@@ -35,7 +36,6 @@ export default function Header() {
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
-            console.log("Working");
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('fly-show');
@@ -74,6 +74,25 @@ export default function Header() {
                         </ul>
                     </div>
                 </tav>
+
+                <h1 id="landing-text">
+                    <span>R</span>
+                    <span>o</span>
+                    <span>g</span>
+                    <span>u</span>
+                    <span>e</span>
+                </h1>
+                <h1 id="landing-text">
+                    <span>T</span>
+                    <span>a</span>
+                    <span>t</span>
+                    <span>t</span>
+                    <span>o</span>
+                    <span>o</span>
+                    <span>s</span>
+                </h1>
+
+
             </header>
             <hr className='horizontal-row' />
             <div className="content">
@@ -90,6 +109,6 @@ export default function Header() {
                 </p>
             </div>
             <hr className='horizontal-row' />
-        </div>
+        </div >
     )
 }

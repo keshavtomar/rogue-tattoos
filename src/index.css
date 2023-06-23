@@ -3,8 +3,12 @@
 } */
 
 
+*{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 body {
   margin: 0;
-font-family: 'Inknut Antiqua', serif;
+font-family: 'Space Grotesk', sans-serif;
 }
 

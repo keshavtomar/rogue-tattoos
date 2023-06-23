@@ -17,6 +17,7 @@ export default function Home() {
             <Header />
             <Counter />
             <Review />
+            <hr className='horizontal-row' />
             <Contact />
         </div>
     )

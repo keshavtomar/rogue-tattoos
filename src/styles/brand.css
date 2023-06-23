@@ -1,37 +1,35 @@
 .brand{
     display: flex;
-    width: 410px;
+    width: 350px;
     justify-content: flex-start;
     transition: all 0.8 ease;
-    animation: flicker-1 2.5s linear infinite both;
+    /* animation: flicker-1 2.5s linear infinite both; */
 }
 
 @media(max-width: 892px){
     .brand{
-        width: 270px;
-        transition: all 0.8 ease;
+        width: 230px;
+        transform: translateX(-25px);
+        transition: all 0.7 ease;
     }
 }
 
 #blogo{
-    width: 12%;
-    aspect-ratio: 3/5;
-    transition: all 0.8s ease;
+    width: 10%;
+    transition: all 0.7s ease;
 }
 
 #bname{
-    width: 25%;
-    aspect-ratio: 5/3;
-    transition: all 0.8s ease;
+    width: 22%;
+    transition: all 0.7s ease;
 }
 
 .bblur{
-    backdrop-filter: blur(8px);
     border-radius: 10%;
 }
 
 
-@keyframes flicker-1 {
+/* @keyframes flicker-1 {
 
     0%,
     100% {
@@ -69,4 +67,4 @@
     49.01% {
         opacity: 1;
     }
-}
+} */

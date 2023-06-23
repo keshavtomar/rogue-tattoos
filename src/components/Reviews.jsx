@@ -1,3 +1,4 @@
+import React from 'react';
 import "../styles/review.css";
 import Stars from "../components/Stars";
 import Avatar from "@mui/material/Avatar";

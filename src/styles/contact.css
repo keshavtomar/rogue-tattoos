@@ -4,35 +4,41 @@
     margin: auto;
 }
 
+.details{
+    display: block;
+    text-align: center;
+}
+
+.details a{
+    text-decoration: none;
+    color: wheat;
+}
+
+.timing{
+    line-height: 2rem;
+}
+
 .map{
-    width: 90%;
-    height: 75vh;
+    width:650px;
+    height:350px;
+    transition: all 0.7s;
 }
 
-.map-weather{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.map-container{
-    width: 70vw;
-}
-
-.weather-container{
-    width: 25vw;
-}
-
-@media only screen and (max-width: 1000px) {
-    .map-weather{
-       flex-direction: column;
-       align-items: center;
-    }
-    .map-container{
-        width: 80%;
-    }
-    .map-weather{
-        width: 70%;
+@media (max-width: 767px) {
+    .map{
+        width: 100%;
+        height: 350px;
+        text-align: center;
+        align-items: center;
+        margin: auto;
     }
 
+    .row{
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+    .col-lg-8{
+        padding: 0;
+    }
 }

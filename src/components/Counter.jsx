@@ -51,7 +51,6 @@ export default function Counter() {
         valueDisplays.forEach((valueDisplay, index) => {
             let startValue = 0;
             let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-            console.log(endValue);
             let duration = Math.floor(interval / endValue);
             let coounter = setInterval(function () {
 
@@ -89,7 +88,7 @@ export default function Counter() {
                 </div>
                 <div className='ccontainer fly-hidden'>
                     <AccessTimeIcon className='ci' fontSize='large' />
-                    <span className='cnum' data-val='6'>0</span>
+                    <span className='cnum' data-val='12'>0</span>
                     <span className='ctext'>Years of Experience</span>
                 </div>
             </div>
