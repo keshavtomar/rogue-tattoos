@@ -45,16 +45,11 @@
 }
 
 span{
-    display: inline;
     color: white;
-    align-items: center;
 }
 
 span.cnum{
     color:#fff;
-    display:grid;
-    align-items: center;
-    place-items: center;
     font-weight: 600;
     font-size: 3em;
 }

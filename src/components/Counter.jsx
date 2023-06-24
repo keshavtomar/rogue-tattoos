@@ -73,23 +73,34 @@ export default function Counter() {
             <div onScrollIntoView={showValues} className='cwrapper'>
                 <div className='ccontainer fly-hidden'>
                     <DrawIcon className='ci' fontSize='large' />
-                    <span className='cnum' data-val='3000'>0</span>
-                    {/* <span className='xnum'>+</span> */}
+                    <div style={{ 'textAlign': 'center' }}>
+                        <span className='cnum' data-val='3000'>0</span>
+                        <span className='xnum'>+</span>
+                    </div>
                     <span className='ctext'>Inked tattoos</span>
                 </div>
                 <div className='ccontainer fly-hidden'>
                     <MoodIcon className='ci' fontSize='large' />
-                    <span className='cnum' data-val='2500'>0</span>
+                    <div style={{ 'textAlign': 'center' }}>
+                        <span className='cnum' data-val='2500'>0</span>
+                        <span className='xnum'>+</span>
+                    </div>
                     <span className='ctext'>Happy Customers</span>
                 </div>
                 <div className='ccontainer fly-hidden'>
                     <StarBorderPurple500Icon className='ci' fontSize='large' />
-                    <span className='cnum' data-val='130'>0</span>
+                    <div style={{ 'textAlign': 'center' }}>
+                        <span className='cnum' data-val='130'>0</span>
+                        <span className='xnum'>+</span>
+                    </div>
                     <span className='ctext'>5 ★ Ratings on Google</span>
                 </div>
                 <div className='ccontainer fly-hidden'>
                     <AccessTimeIcon className='ci' fontSize='large' />
-                    <span className='cnum' data-val='12'>0</span>
+                    <div style={{ 'textAlign': 'center' }}>
+                        <span className='cnum' data-val='12'>0</span>
+                        <span className='xnum'>+</span>
+                    </div>
                     <span className='ctext'>Years of Experience</span>
                 </div>
             </div>
