@@ -24,31 +24,31 @@
 
 .ctaPhone:hover{
     /* border: 5px solid #46d4ff; */
-    box-shadow: 0 0 30px 10px #46d4ff;
+    box-shadow: 0 0 30px 10px #A68954;
     transition: all 0.7s ease;
 }
 .ctaPhoneLink:hover{
-    color:#46d4ff;
+    color:#A68954;
     transition: all 0.7s ease;
 }
 
 .ctaWhatsapp:hover{
-    /* border: 5px solid #23d765; */
-    box-shadow: 0 0 30px 10px #23d765;
+    /* border: 5px solid #A68954; */
+    box-shadow: 0 0 30px 10px #A68954;
     transition: all 0.7s ease;
 }
 .ctaWhatsappLink:hover{
-    color:#23d765;
+    color:#A68954;
     transition: all 0.7s ease;
 }
 
 .ctaInstagram:hover{
-    /* border: 5px solid #db71cd; */
-    box-shadow: 0 0 30px 10px #db71cd;
+    /* border: 5px solid #A68954; */
+    box-shadow: 0 0 30px 10px #A68954;
     transition: all 0.7s ease;
 }
 .ctaInstagramLink:hover{
-    color:#db71cd;
+    color:#A68954;
     transition: all 0.7s ease;
 }
 

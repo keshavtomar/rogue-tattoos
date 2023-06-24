@@ -12,7 +12,7 @@ export default function Contact() {
                         Address : B- 1/18- B Paschim Vihar, New Delhi, Delhi 110063
                         <div className='details'>
                             <a href="tel:+919971947774" className='mx-3'>P.no : 9971947774 </a>
-                            <a href="tel:+919971947774" className='mx-3'>Email : akashtomar@gmail.com</a>
+                            <a href="tel:+919971947774" className='mx-3'>Email : theroguetattoos.com</a>
                         </div>
                     </div>
                     <div className='d-block'>

@@ -22,6 +22,7 @@
     width:650px;
     height:350px;
     transition: all 0.7s;
+    filter:invert(100%);
 }
 
 @media (max-width: 767px) {

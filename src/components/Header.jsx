@@ -75,14 +75,24 @@ export default function Header() {
                     </div>
                 </tav>
 
-                <h1 id="landing-text">
+                <div class="acontainer">
+                    <div class="acircles-wrapper">
+                        <div class="acircle acircle-lg">
+                            <div class="acircle acircle-md">
+                                <div class="acircle acircle-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 id="landing-text1">
                     <span>R</span>
                     <span>o</span>
                     <span>g</span>
                     <span>u</span>
                     <span>e</span>
                 </h1>
-                <h1 id="landing-text">
+                <h1 id="landing-text2">
                     <span>T</span>
                     <span>a</span>
                     <span>t</span>
@@ -90,6 +100,7 @@ export default function Header() {
                     <span>o</span>
                     <span>o</span>
                     <span>s</span>
+                    <span id='est'>Est. 2015</span>
                 </h1>
 
 

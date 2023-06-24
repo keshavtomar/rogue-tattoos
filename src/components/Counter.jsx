@@ -73,12 +73,13 @@ export default function Counter() {
             <div onScrollIntoView={showValues} className='cwrapper'>
                 <div className='ccontainer fly-hidden'>
                     <DrawIcon className='ci' fontSize='large' />
-                    <span className='cnum' data-val='1500'>0</span>
+                    <span className='cnum' data-val='3000'>0</span>
+                    {/* <span className='xnum'>+</span> */}
                     <span className='ctext'>Inked tattoos</span>
                 </div>
                 <div className='ccontainer fly-hidden'>
                     <MoodIcon className='ci' fontSize='large' />
-                    <span className='cnum' data-val='1200'>0</span>
+                    <span className='cnum' data-val='2500'>0</span>
                     <span className='ctext'>Happy Customers</span>
                 </div>
                 <div className='ccontainer fly-hidden'>
