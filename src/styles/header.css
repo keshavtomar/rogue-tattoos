@@ -34,7 +34,8 @@ header::before {
 
 .follow-us-container{
     position:fixed;
-    top:40vh;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 

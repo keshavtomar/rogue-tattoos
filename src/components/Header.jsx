@@ -30,6 +30,7 @@ export default function Header() {
                 tabElement.classList.remove('black');
             }
         }
+
     };
 
     window.addEventListener('scroll', handleScroll);
