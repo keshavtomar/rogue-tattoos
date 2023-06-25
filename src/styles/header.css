@@ -32,6 +32,11 @@ header::before {
     /* z-index: 0; */
 }
 
+.follow-us-container{
+    position:fixed;
+    top:40vh;
+}
+
 
 .content{
     margin: auto;
@@ -48,21 +53,16 @@ p,h2{
     color:white;
 }
 
-.glow {
-    color: rgb(41, 123, 255);
-    text-shadow: 0px 0px 30px rgb(41, 123, 255);
-    transition: all 0.2s ease-in;
-}
-
 .logo {
     line-height: 50px;
     position: fixed;
     float: left;
-    margin: 0 46px;
+    margin: 0 30px;
     color: #fff;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
+    transition: all 0.7s;
 }
 
 tav {
@@ -81,7 +81,7 @@ tav ul {
     padding: 0;
     text-align: right;
     margin: 0;
-    padding-right: 40px;
+    padding-right: 30px;
     transition: 0.7s;
 }
 
@@ -110,7 +110,7 @@ tav ul li {
     position: absolute;
     width: 100%;
     height: 4px;
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: #A68954;
     bottom: 0;
     left: 0;
@@ -137,41 +137,46 @@ tav ul li {
     display: none;
 }
 
-
-#landing-text1{
-    color:whitesmoke;
+.brand-impression{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    font-size: 7rem;
-    display: inline-block;
-    letter-spacing: 10px;
-    text-shadow: 3px 3px 20px whitesmoke,
-            -2px 1px 30px whitesmoke;
-    position: relative;
-    top:30vh;
-    left:35vw;
-}
-
-#landing-text2{
-    color:whitesmoke;
-    align-items: center;
-    font-size: 7rem;
-    display: inline-block;
-    letter-spacing: 10px;
-    text-shadow: 3px 3px 20px whitesmoke,
-            -2px 1px 30px whitesmoke;
-    position: relative;        
-    top:50vh;
-    left:4vw;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 
-#est{
+#landing-text1,#landing-text2{
+    margin: 0;
     color: whitesmoke;
-    position: relative;
-    font-size: 1rem;
-    top:5vh;
-    right:12vw;
+    align-items: center;
+    font-size: 7vw;
+    display: block;
+    letter-spacing: 10px;
+    text-shadow: 3px 3px 20px whitesmoke,
+                -2px 1px 30px whitesmoke;
+    transition: all 0.7s;
 }
+
+.last2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#landing-text3{
+    margin: 0;
+    color: whitesmoke;
+    align-items: center;
+    font-size: 1.2vw;
+    display: block;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 20px whitesmoke,
+                -2px 1px 30px whitesmoke;
+}
+
+
 
 #landing-text1 span {
     opacity: 0;
@@ -181,7 +186,7 @@ tav ul li {
     opacity: 0;
     animation: fade-in 1s ease-in-out forwards;
 }
-#landing-text span {
+#landing-text3 span{
     opacity: 0;
     animation: fade-in 1s ease-in-out forwards;
 }
@@ -233,7 +238,7 @@ tav ul li {
 #landing-text2 span:nth-child(7) {
     animation-delay: 4.6s;
 }
-#landing-text2 span:nth-child(8) {
+#landing-text3 span:nth-child(1) {
     animation-delay: 4.9s;
 }
 
@@ -269,10 +274,15 @@ tav ul li {
         display: block;
     }
 
-    #landing-text{
-      font-size: 5rem;
-      margin:0;
+    #landing-text1,#landing-text2{
+        letter-spacing: 5px;
     }
+
+    #landing-text3{
+        font-size: 1.2vw;
+        letter-spacing: 2px;
+    }
+
 }
 
 

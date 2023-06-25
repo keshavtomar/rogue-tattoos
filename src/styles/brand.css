@@ -17,6 +17,7 @@
 #blogo{
     width: 10%;
     transition: all 0.7s ease;
+    filter:contrast(500%);
 }
 
 #bname{

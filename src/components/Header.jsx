@@ -3,6 +3,7 @@ import '../styles/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import Brand from './Brand';
 import aboutUs from '../data/content.jsx'
+import FollowUs from './FollowUs';
 
 export default function Header() {
     const [isOpen, setisOpen] = useState(false);
@@ -75,35 +76,32 @@ export default function Header() {
                     </div>
                 </tav>
 
-                <div class="acontainer">
-                    <div class="acircles-wrapper">
-                        <div class="acircle acircle-lg">
-                            <div class="acircle acircle-md">
-                                <div class="acircle acircle-sm"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div className='follow-us-container'>
+                    <FollowUs />
                 </div>
-
 
                 <div className='brand-impression'>
                     <h1 id="landing-text1">
-                        <span style={{ outlineOffset: '2px' }}>R</span>
+                        <span>R</span>
                         <span>o</span>
                         <span>g</span>
                         <span>u</span>
                         <span>e</span>
                     </h1>
-                    <h1 id="landing-text2">
-                        <span>T</span>
-                        <span>a</span>
-                        <span>t</span>
-                        <span>t</span>
-                        <span>o</span>
-                        <span>o</span>
-                        <span>s</span>
-                        <span id='est'>Est. 2015</span>
-                    </h1>
+                    <div className='last2'>
+                        <h1 id="landing-text2">
+                            <span>T</span>
+                            <span>a</span>
+                            <span>t</span>
+                            <span>t</span>
+                            <span>o</span>
+                            <span>o</span>
+                            <span>s</span>
+                        </h1>
+                        <h1 id='landing-text3'>
+                            <span id='est'>Est. 2015</span>
+                        </h1>
+                    </div>
                 </div>
 
 
