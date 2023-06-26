@@ -3,8 +3,12 @@ import "../styles/review.css";
 import Stars from "../components/Stars";
 import Avatar from "@mui/material/Avatar";
 import review from "../data/review";
+import ChildReview from './ChildReview';
 
 export default function Review() {
+
+    console.log(review);
+
     const showreviews = () => {
         const reviews = [];
         const it = review.length;
@@ -50,7 +54,13 @@ export default function Review() {
                 </span>
             </h2>
             <div className="reviews">
-                {showreviews()}
+                {
+                    review.map((v,i)=>{
+                        return(
+                            <ChildReview review={v}/>
+                        )
+                    })
+                }
             </div>
         </div>
     );
