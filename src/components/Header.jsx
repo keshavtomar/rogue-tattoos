@@ -73,7 +73,7 @@ export default function Header() {
                             <li className='bblur'><a className='nav-link' href="/">Home</a></li>
                             <li className='bblur'><a className='nav-link' href="/">About</a></li>
                             <li className='bblur'><a className='nav-link' href="/">Blog</a></li>
-                            <li className='bblur'><a className='nav-link' href="/">Gallery</a></li>
+                            <li className='bblur'><a className='nav-link' href="/gallery">Gallery</a></li>
                             <li className='bblur'><a className='nav-link' href="/">Contact</a></li>
                         </ul>
                     </div>
