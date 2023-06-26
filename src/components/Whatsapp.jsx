@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, Tooltip } from '@mui/material';
-import { PhoneInTalk, WhatsApp, Instagram, Close, CropSquare } from '@mui/icons-material';
 import '../styles/cta.css'
 
 
@@ -45,25 +44,25 @@ export default function Whatsapp() {
             <div id='x' className={expand ? '' : 'cta-hidden'}>
                 <div className='ctaIcon ctaPhone'>
                     <Tooltip title="Call" placement='left' arrow>
-                        <Link className='cta-phone-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><PhoneInTalk /></Link>
+                        <Link className='cta-phone-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><i className="fa-solid fa-phone"></i></Link>
                     </Tooltip>
                 </div>
                 <div className='ctaIcon ctaWhatsapp'>
                     <Tooltip title="Whatsapp" placement='left' arrow>
-                        <Link className='cta-whatsapp-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><WhatsApp /></Link>
+                        <Link className='cta-whatsapp-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><i className="fa-brands fa-whatsapp"></i></Link>
                     </Tooltip>
                 </div>
                 <div className='ctaIcon ctaInstagram'>
                     <Tooltip title="Instagram" placement='left' arrow>
-                        <Link className='cta-instagram-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><Instagram /></Link>
+                        <Link className='cta-instagram-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><i className="fa-regular fa-envelope"></i></Link>
                     </Tooltip>
                 </div>
             </div>
             <div className='ctaIcon ctaToggle'><Link sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} onClick={handleExpand}>
                 {expand === true ?
-                    <Close />
+                    <i className="fa-solid fa-xmark"></i>
                     :
-                    <CropSquare />
+                    <i className="fa-regular fa-square"></i>
                 }
             </Link></div>
         </div>

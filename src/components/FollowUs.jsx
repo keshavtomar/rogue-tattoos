@@ -11,9 +11,9 @@ export default function FollowUs() {
 
         if (followUsElement) {
             if (scrollTop > 0) {
-                followUsElement.classList.add('black');
+                followUsElement.classList.add('blck');
             } else {
-                followUsElement.classList.remove('black');
+                followUsElement.classList.remove('blck');
             }
         }
     };
@@ -21,14 +21,17 @@ export default function FollowUs() {
     window.addEventListener('scroll', handleScroll);
 
     return (
-        <div className="followUs">
+        <div className="followUs" style={{ 'paddingRight': '2px' }}>
             <p className="follow-text py-1">FOLLOW</p>
             <div className="follow-icons">
                 <a href='https://www.facebook.com/theroguetattoos/' target='_blank'>
-                    <FacebookIcon />
+                    <i class="fa-brands fa-facebook-f"></i>
                 </a>
                 <a href='https://www.instagram.com/theroguetattoos/' target='_blank'>
-                    <InstagramIcon />
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href='https://www.instagram.com/theroguetattoos/' target='_blank'>
+                    <i class="fa-brands fa-snapchat"></i>
                 </a>
             </div>
             <p className="follow-text py-1">US</p>

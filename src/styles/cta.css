@@ -1,4 +1,4 @@
-.cta{
+.cta {
     display: inline-block;
     position: fixed;
     z-index: 1;
@@ -7,63 +7,67 @@
     opacity: 1;
 }
 
-.ctaIcon{
+
+.ctaIcon {
     padding: 4px 4px;
-    /* border: 5px solid #D8E2DC; */
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     opacity: 1;
     display: flex;
     justify-content: center;
-    padding-top: 10%;
+    align-items: center;
+    padding-bottom: 7px;
     background-color: black;
     margin-top: 5px;
     transition: all .7s ease;
+    text-decoration: none;
 }
 
-.ctaPhone:hover{
-    /* border: 5px solid #46d4ff; */
+.ctaPhone:hover {
     box-shadow: 0 0 30px 10px #A68954;
     transition: all 0.7s ease;
 }
-.ctaPhoneLink:hover{
-    color:#A68954;
+
+.ctaPhoneLink:hover {
+    color: #A68954;
     transition: all 0.7s ease;
 }
 
-.ctaWhatsapp:hover{
+.ctaWhatsapp:hover {
     /* border: 5px solid #A68954; */
     box-shadow: 0 0 30px 10px #A68954;
     transition: all 0.7s ease;
 }
-.ctaWhatsappLink:hover{
-    color:#A68954;
+
+.ctaWhatsappLink:hover {
+    color: #A68954;
     transition: all 0.7s ease;
 }
 
-.ctaInstagram:hover{
+.ctaInstagram:hover {
     /* border: 5px solid #A68954; */
     box-shadow: 0 0 30px 10px #A68954;
     transition: all 0.7s ease;
 }
-.ctaInstagramLink:hover{
-    color:#A68954;
+
+.ctaInstagramLink:hover {
+    color: #A68954;
     transition: all 0.7s ease;
 }
 
-.ctaToggle:hover{
+.ctaToggle:hover {
     /* border: 5px solid #000; */
     box-shadow: 0 0 30px #000;
     transition: all 0.5s ease;
 }
 
 
-.cta-hidden{
+.cta-hidden {
     opacity: 0;
     transition: all 0.7s ease;
 }
 
-.non-display{
+.non-display {
     display: none;
 }

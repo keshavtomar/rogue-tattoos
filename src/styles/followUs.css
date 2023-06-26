@@ -8,12 +8,28 @@
 
 .follow-text {
     margin: 0;
-    font-size: 1.2em;
     color: white;
     letter-spacing: 3px;
 }
 
-a{
+.follow-icons{
+    display: flex;
+    height: 72px;
+}
+
+
+.follow-icons a{
+    display: block;
+    padding: 5% 0%;
     text-decoration: none;
     color: white;
+    transition: all 0.7s;
+}
+
+.follow-icons a:hover{
+    color:#A68954;
+}
+
+.blck{
+    background-color: #000;
 }

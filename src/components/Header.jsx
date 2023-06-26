@@ -4,6 +4,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Brand from './Brand';
 import aboutUs from '../data/content.jsx'
 import FollowUs from './FollowUs';
+import Glasscard from './Glasscard';
+import Blob from './Blob';
 
 export default function Header() {
     const [isOpen, setisOpen] = useState(false);
@@ -81,28 +83,35 @@ export default function Header() {
                     <FollowUs />
                 </div>
 
+                <div className='blob-container'>
+                    <Blob />
+                </div>
+
                 <div className='brand-impression'>
                     <h1 id="landing-text1">
                         <span>R</span>
-                        <span>o</span>
-                        <span>g</span>
-                        <span>u</span>
-                        <span>e</span>
+                        <span>O</span>
+                        <span>G</span>
+                        <span>U</span>
+                        <span>E</span>
                     </h1>
                     <div className='last2'>
                         <h1 id="landing-text2">
                             <span>T</span>
-                            <span>a</span>
-                            <span>t</span>
-                            <span>t</span>
-                            <span>o</span>
-                            <span>o</span>
-                            <span>s</span>
+                            <span>A</span>
+                            <span>T</span>
+                            <span>T</span>
+                            <span>O</span>
+                            <span>O</span>
+                            <span>S</span>
                         </h1>
                         <h1 id='landing-text3'>
                             <span id='est'>Est. 2015</span>
                         </h1>
                     </div>
+                </div>
+                <div className='consult'>
+                    <Glasscard />
                 </div>
 
 

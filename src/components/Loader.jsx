@@ -15,11 +15,11 @@ export default function Loader() {
 
     return (
         <div className='loader'>
-            <div class="newtons-cradle">
-                <div class="newtons-cradle__dot"></div>
-                <div class="newtons-cradle__dot"></div>
-                <div class="newtons-cradle__dot"></div>
-                <div class="newtons-cradle__dot"></div>
+            <div className="newtons-cradle">
+                <div className="newtons-cradle__dot"></div>
+                <div className="newtons-cradle__dot"></div>
+                <div className="newtons-cradle__dot"></div>
+                <div className="newtons-cradle__dot"></div>
             </div>
         </div>
     )
