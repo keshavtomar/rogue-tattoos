@@ -1,0 +1,26 @@
+.ourwork-section{
+    margin: 80px;
+}
+
+.ourwork{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.work-heading{
+    color:#fff;
+}
+
+.work-card{
+    display: inline-block;
+    width:300px;
+    margin:30px 30px;
+}
+
+
+@media (max-width: 767px) {
+    .ourwork-section {
+        margin: 30px;
+    }
+}

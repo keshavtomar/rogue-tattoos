@@ -52,6 +52,7 @@ export default function Review() {
             <div className="reviews">
                 {showreviews()}
             </div>
+
         </div>
     );
 }

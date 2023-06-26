@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Counter from './components/Counter';
 import Contact from './components/Contact';
 import Review from './components/Reviews';
+import Ourwork from './components/Ourwork';
 
 export default function Home() {
     return (
@@ -15,6 +16,8 @@ export default function Home() {
             <Loader />
             <WhatsApp />
             <Header />
+            <Ourwork />
+            <hr className='horizontal-row' />
             <Counter />
             <Review />
             <hr className='horizontal-row' />

@@ -12,3 +12,13 @@ body {
 font-family: 'Space Grotesk', sans-serif;
 }
 
+
+.section {
+  margin: 80px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    margin: 30px;
+  }
+}
