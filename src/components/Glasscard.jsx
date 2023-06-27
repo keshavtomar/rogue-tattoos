@@ -5,7 +5,7 @@ const Card = () => {
     return (
         <div class="card">
             <div class="card1">
-                <p>Talk to a Tattoo Expert</p>
+                <p>Get connected to a professional</p>
                 <div class='card-buttons'>
                     <button type="button" class="btn btn-warning">Call</button>
                     <button type="button" class="btn btn-warning">Whatsapp</button>
@@ -16,7 +16,7 @@ const Card = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
