@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #2B2730;
+    background-color: #252527;
 }
 
 body {
@@ -95,7 +95,7 @@ tav ul {
 }
 
 tav.black ul {
-    background: #2B2730;
+    background: #252527;
     z-index: 2;
 }
 
@@ -137,7 +137,7 @@ tav ul li {
 .menu-icon {
     line-height: 50px;
     width: 100%;
-    background: #2B2730;
+    background: #252527;
     text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
@@ -279,11 +279,11 @@ tav ul li {
 
     tav ul {
         max-height: 0px;
-        background: #2B2730;
+        background: #252527;
     }
 
     tav.black ul {
-        background: #2B2730;
+        background: #252527;
     }
 
     .showing {

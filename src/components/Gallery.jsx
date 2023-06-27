@@ -1,11 +1,14 @@
 import React from 'react'
-import Header from './Header'
+import '../styles/header.css'
 
 function Gallery() {
   return (
     <div>
-        <Header />
-      <h1 style={{color:"red"}}> Gallery </h1>
+      <h2>
+        <span className='line-pass'>
+          Artful Archive
+        </span>
+      </h2>
     </div>
   )
 }
