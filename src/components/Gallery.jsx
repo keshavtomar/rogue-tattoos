@@ -11,6 +11,10 @@ function Gallery() {
         </span>
       </h2>
       <Swiper />
+      <hr className='horizontal-row'></hr>
+      <div className='gallery-raw'>
+
+      </div>
     </div>
   )
 }

@@ -17,6 +17,7 @@
     height: 100%;
     filter:grayscale(100%);
     transition:all 0.3s;
+    object-fit: cover;
 }
 
 .front-slide img{

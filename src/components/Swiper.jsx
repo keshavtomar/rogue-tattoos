@@ -10,22 +10,18 @@ import "swiper/css/effect-coverflow";
 import "../styles/swiper.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import { Keyboard, EffectCoverflow, Pagination } from "swiper";
 
 export default function App() {
-
-
     return (
-        <>
+        <div>
             <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
                 initialSlide={2}
-                loop={true}
-                slideActiveClass="front-slide"
                 slidesPerView={"auto"}
-                keyboard={true}
+                keyboard={{ enabled: true }}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
@@ -34,7 +30,7 @@ export default function App() {
                     slideShadows: true,
                 }}
                 pagination={true}
-                modules={[EffectCoverflow, Pagination]}
+                modules={[EffectCoverflow, Pagination, Keyboard]}
                 className="mySwiper"
             >
                 <SwiperSlide>
@@ -59,6 +55,6 @@ export default function App() {
                     <img src="images/bg7.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
             </Swiper >
-        </>
+        </div>
     );
 }
