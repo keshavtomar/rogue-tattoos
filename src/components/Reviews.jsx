@@ -1,42 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../styles/review.css";
-import Stars from "../components/Stars";
-import Avatar from "@mui/material/Avatar";
 import review from "../data/review";
 import ChildReview from './ChildReview';
 
+
+//use of swiper library for mobile card effects
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+import { EffectCards } from "swiper";
+
 export default function Review() {
 
-    console.log(review);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 764);
 
-    const showreviews = () => {
-        const reviews = [];
-        const it = review.length;
-        for (let i = 0; i < it; i++) {
-            reviews.push(
-                <div className="review-card fly-hidden">
-                    <Avatar
-                        className="avatar"
-                        alt={review[i].name}
-                        src="../public/images/a.png"
-                        sx={{ height: 56, width: 56 }}
-                    />
-                    <Stars filled={review[i].stars} />
-                    <hr />
-                    <p>{review[i].review.slice(0, 170)}...</p>
-                    <a className="review-link" href="#home">Read More</a>
-                    <h4 className="review-card-name">{review[i].name}</h4>
-                    <p className="review-card-date">{review[i].date}</p>
-                </div>
-            );
-        }
-        return reviews;
-    }
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 764);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isMobile]);
 
     const card = document.querySelector('.review-card');
 
-    if (card) {
+    if (card && isMobile) {
         card.addEventListener('mouseenter', () => {
             card.classList.add('zoomOff');
         });
@@ -46,22 +41,63 @@ export default function Review() {
         });
     }
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fly-show');
+                } else {
+                    entry.target.classList.remove('fly-show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.fly-hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        // Clean up the observer when the component unmounts
+        return () => {
+            hiddenElements.forEach((el) => observer.unobserve(el));
+        };
+    }, [isMobile]);
+
     return (
         <div className="review-section">
             <h2>
                 <span className='line-pass'>
-                    Reviews
+                    What our clients say
                 </span>
             </h2>
-            <div className="reviews">
-                {
-                    review.map((v,i)=>{
-                        return(
-                            <ChildReview review={v}/>
+
+            {isMobile ?
+                <div>
+                    <Swiper className="cswiper"
+                        effect={"cards"}
+                        grabCursor={true}
+                        modules={[EffectCards]}
+                    >
+                        {
+                            review.map((v, i) => {
+                                return (
+                                    <SwiperSlide className='cswiper-slide' key={i}><ChildReview review={v} key={i} /></SwiperSlide>
+                                )
+                            })
+                        }
+                    </Swiper>
+                </div>
+                :
+                <div className="reviews">
+                    {review.map((v, i) => {
+                        return (
+                            <ChildReview review={v} />
                         )
-                    })
-                }
-            </div>
+                    })}
+                </div>
+            }
+
+
+
+
 
         </div>
     );

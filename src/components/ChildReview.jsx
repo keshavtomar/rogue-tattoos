@@ -36,16 +36,13 @@ function MyVerticallyCenteredModal(props) {
 }
 
 
-function ChildReview({ review }) {
-
-  console.log(review);
-
+function ChildReview({ review, key }) {
   const [modalShow, setModalShow] = useState(false);
-  console.log(modalShow);
   const handleShow = () => setModalShow(true);
 
   return (
-    <div className="review-card fly-hidden" style={{ cursor: "pointer" }}
+    <div className="review-card" style={{ cursor: "pointer" }}
+      key={key}
       onClick={() => (modalShow ? null : handleShow())}>
       <Avatar
         className="avatar"
@@ -55,7 +52,7 @@ function ChildReview({ review }) {
       />
       <Stars filled={review.stars} />
       <hr />
-      <p>{review.review.slice(0, 170)}...</p>
+      <p className='fly-hidden' >{review.review.slice(0, 120)}...</p>
       <a className="review-link" href="#home">Read More</a>
       <h4 className="review-card-name">{review.name}</h4>
       <p className="review-card-date">{review.date}</p>

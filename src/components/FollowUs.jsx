@@ -1,7 +1,5 @@
 import React from 'react'
 import '../styles/followUs.css'
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function FollowUs() {
     const handleScroll = () => {
@@ -11,9 +9,9 @@ export default function FollowUs() {
 
         if (followUsElement) {
             if (scrollTop > 0) {
-                followUsElement.classList.add('blck');
+                followUsElement.classList.add('glass-effect');
             } else {
-                followUsElement.classList.remove('blck');
+                followUsElement.classList.remove('glass-effect');
             }
         }
     };

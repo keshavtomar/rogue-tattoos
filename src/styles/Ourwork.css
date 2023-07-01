@@ -27,6 +27,11 @@
     height: 50px;
 }
 
+#permanent-tattoo-icon{
+    width: 60px;
+    height: 60px;
+}
+
 
 @media (max-width: 767px) {
     .ourwork-section {

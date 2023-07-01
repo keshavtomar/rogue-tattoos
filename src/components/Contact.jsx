@@ -1,6 +1,5 @@
 import React from 'react'
 import '../styles/contact.css'
-import WeatherCard from './WeatherCard'
 
 export default function Contact() {
     return (

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 
-
 .review-section{
     margin:80px;
 }
@@ -20,19 +19,22 @@
     font-weight: 300;
     background-color: #27374d;
     color: white;
-    width: 300px;
+    width: 265px;
     border-radius: 20px;
     border:0px;
     padding: 15px;
-    margin: 5px 5px;
+    margin: 8px 5px;
     text-align: center;
     transition: all 0.7s;
 }
 
-.review-card:hover{
-    transform: scale(1.2);
-    z-index: 1;
-    box-shadow: 1px;
+.review-card .fly-hidden{
+    height: 130px;
+    align-items: center;
+}
+
+.review-card a{
+    color: #A68954;
 }
 
 .zoomOff{
@@ -64,8 +66,35 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
-    .review-section{
-        margin: 30px;
+@media(min-width:764px) {
+        .review-card:hover {
+            transform: scale(1.2);
+            z-index: 1;
+            box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
+        }
     }
+    
+    @media (max-width: 764px) {
+        .review-section{
+            margin: 0px;
+            overflow: hidden;
+        }
+        .review-card{
+            width: 240px;
+            margin: 0px 0px;
+        }
+}
+
+
+.cswiper {
+    width: 240px;
+    height: auto;
+}
+
+.cswiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    color: #fff;
 }

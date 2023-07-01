@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-// import "swiper/css/pagination";
+
 
 import "../styles/swiper.css";
 
@@ -15,7 +14,7 @@ import { Keyboard, EffectCoverflow, Pagination } from "swiper";
 export default function App() {
     return (
         <div>
-            <Swiper
+            <Swiper className="gswiper"
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
@@ -31,27 +30,26 @@ export default function App() {
                 }}
                 pagination={true}
                 modules={[EffectCoverflow, Pagination, Keyboard]}
-                className="mySwiper"
             >
-                <SwiperSlide>
+                <SwiperSlide className="gswiper-slide">
                     <img src="images/bg1.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="gswiper-slide">
                     <img src="images/bg2.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="gswiper-slide">
                     <img src="images/bg3.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="gswiper-slide">
                     <img src="images/bg4.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="gswiper-slide">
                     <img src="images/bg5.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="gswiper-slide">
                     <img src="images/bg6.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="gswiper-slide">
                     <img src="images/bg7.jpg" alt="rogue-tattoos" />
                 </SwiperSlide>
             </Swiper >

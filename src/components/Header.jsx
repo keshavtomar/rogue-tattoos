@@ -4,8 +4,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Brand from './Brand';
 import aboutUs from '../data/content.jsx'
 import FollowUs from './FollowUs';
-import Glasscard from './Glasscard';
-import Blob from './Blob';
 
 export default function Header() {
     const [isOpen, setisOpen] = useState(false);
@@ -27,9 +25,9 @@ export default function Header() {
 
         if (tabElement) {
             if (scrollTop > 0) {
-                tabElement.classList.add('black');
+                tabElement.classList.add('glass-effect');
             } else {
-                tabElement.classList.remove('black');
+                tabElement.classList.remove('glass-effect');
             }
         }
 
@@ -65,10 +63,10 @@ export default function Header() {
                     <div onClick={handleClick} className="menu-icon">
                         <MenuIcon />
                     </div>
-                    <div className="logo">
-                        <Brand />
-                    </div>
                     <div className="menu">
+                        <div className="logo">
+                            <Brand />
+                        </div>
                         <ul className={isOpen ? 'showing' : ''}>
                             <li className='bblur'><a className='nav-link' href="/">Home</a></li>
                             <li className='bblur'><a className='nav-link' href="/">About</a></li>
@@ -81,10 +79,6 @@ export default function Header() {
 
                 <div className='follow-us-container'>
                     <FollowUs />
-                </div>
-
-                <div className='blob-container'>
-                    <Blob />
                 </div>
 
                 <div className='brand-impression'>
@@ -105,17 +99,18 @@ export default function Header() {
                             <span>O</span>
                             <span>S</span>
                         </h1>
-                        <h1 id='landing-text3'>
-                            <span id='est'>Est. 2015</span>
-                        </h1>
+
                     </div>
                 </div>
+
                 <div className='consult'>
-                    <Glasscard />
+                    <p className='glass-effect px-4 d-flex'>Get connected to an expert</p>
+                    <a className='glass-effect px-2' style={{ textDecoration: 'none', color: '#A68954' }} href="#home">Call</a>
+                    <a className='glass-effect px-2' style={{ textDecoration: 'none', color: '#A68954' }} href="#home">WhatsApp</a>
                 </div>
-
-
             </header>
+
+
             <hr className='horizontal-row' />
             <div className="content">
                 <h2>

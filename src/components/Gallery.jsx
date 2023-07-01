@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/header.css'
 import Swiper from './Swiper'
+import Galleryraw from './Galleryraw'
 
 function Gallery() {
   return (
@@ -13,7 +14,7 @@ function Gallery() {
       <Swiper />
       <hr className='horizontal-row'></hr>
       <div className='gallery-raw'>
-
+        <Galleryraw />
       </div>
     </div>
   )

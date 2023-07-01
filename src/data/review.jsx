@@ -40,25 +40,21 @@ const review = [
         "avatar": "link",
         "review": "The best tattoo studio with affordable and reasonable price in Delhi. Tattoo artist Mr. Aakash is really awesome in his work must visit studio if you want by professionals that's the place.",
         "date": "a year ago"
+    },
+    {
+        "name": "Shaymak",
+        "stars": "5",
+        "avatar": "link",
+        "review": "I recently got two tattoos done from The Rogue Tattoos. The work, the art advice and the ambience was great. Very reasonable price as per the work that they are doing. Amazing work, great job. ❤️",
+        "date": "7 months ago"
+    },
+    {
+        "name": "Rishib Ganjoo",
+        "stars": "5",
+        "avatar": "link",
+        "review": "This is my second tattoo from here and both my experiences were very good, highly recommend",
+        "date": "2 months ago"
     }
-    // {
-    //     "name": "Shaymak Chakravarty",
-    //     "stars": "5",
-    //     "avatar": "link",
-    //     "review": "I recently got two tattoos done from The Rogue Tattoos. The work, the art advice and the ambience was great. Very reasonable price as per the work that they are doing. Amazing work, great job. ❤️",
-    //     "date": "7 months ago"
-    // },
-    // {
-    //     "name": "Rishib Ganjoo",
-    //     "stars": "5",
-    //     "avatar": "link",
-    //     "review": "This is my second tattoo from here and both my experiences were very good, highly recommend",
-    //     "date": "2 months ago"
-    // }
-    // },
-    // {
-
-    // }
 ]
 
 export default review;

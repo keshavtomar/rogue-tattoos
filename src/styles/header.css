@@ -39,12 +39,22 @@ header::before {
 }
 
 .consult{
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 240px;
     color:#A68954;
     position:relative;
-    bottom:180px;
+    bottom:120px;
     left: 50px;
 }
+
+.consult a{
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+}
+
 
 
 .content{
@@ -64,7 +74,7 @@ p,h2{
 
 .logo {
     line-height: 50px;
-    position: fixed;
+    position: absolute;
     float: left;
     margin: 0 30px;
     color: #fff;
@@ -94,10 +104,7 @@ tav ul {
     transition: 0.7s;
 }
 
-tav.black ul {
-    background: #252527;
-    z-index: 2;
-}
+
 
 tav ul li {
     display: inline-block;
@@ -125,7 +132,7 @@ tav ul li {
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-link:hover::before {
@@ -137,7 +144,6 @@ tav ul li {
 .menu-icon {
     line-height: 50px;
     width: 100%;
-    background: #252527;
     text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
@@ -155,16 +161,6 @@ tav ul li {
     justify-content: center;
 }
 
-.blob-container{
-    display: inline-block;
-    color: #A68954;
-    position: absolute;
-    top:40%;
-    transform: translateY(-50%);
-    left: 60%;
-    transform: translate(-50%, -50%);
-}
-
 
 #landing-text1,#landing-text2{
     margin: 0;
@@ -178,34 +174,12 @@ tav ul li {
     transition: all 0.7s;
 }
 
-.last2{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-#landing-text3{
-    margin: 0;
-    color: whitesmoke;
-    align-items: center;
-    font-size: 1.2vw;
-    display: block;
-    letter-spacing: 5px;
-    text-shadow: 3px 3px 20px whitesmoke,
-                -2px 1px 30px whitesmoke;
-}
-
-
 
 #landing-text1 span {
     opacity: 0;
     animation: fade-in 1s ease-in-out forwards;
 }
 #landing-text2 span {
-    opacity: 0;
-    animation: fade-in 1s ease-in-out forwards;
-}
-#landing-text3 span{
     opacity: 0;
     animation: fade-in 1s ease-in-out forwards;
 }
@@ -257,9 +231,7 @@ tav ul li {
 #landing-text2 span:nth-child(7) {
     animation-delay: 4.6s;
 }
-#landing-text3 span:nth-child(1) {
-    animation-delay: 4.9s;
-}
+
 
 
 @media(max-width: 764px) {
@@ -272,18 +244,24 @@ tav ul li {
     }
 
     .logo {
-        position: fixed;
+        position: absolute;
         top: 0;
         margin-top: 16px;
     }
 
     tav ul {
         max-height: 0px;
-        background: #252527;
+        box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
+        backdrop-filter: blur(15.5px);
+        -webkit-backdrop-filter: blur(15.5px);
     }
 
     tav.black ul {
-        background: #252527;
+        box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
+        backdrop-filter: blur(15.5px);
+        -webkit-backdrop-filter: blur(15.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
     .showing {
@@ -311,10 +289,6 @@ tav ul li {
         letter-spacing: 2px;
     }
 
-    .blob-container{
-        top:50%;
-        left:70%;
-    }
 
     .consult{
         left: 50%;
@@ -336,4 +310,13 @@ tav ul li {
 .fly-show{
     opacity: 1;
     transform: translateY(0);
+}
+
+.glass-effect{
+    box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
+    backdrop-filter: blur(15.5px);
+    -webkit-backdrop-filter: blur(15.5px);
+    /* border-radius: 10px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    transition: all 0.3s;
 }
