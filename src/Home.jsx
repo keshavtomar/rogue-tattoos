@@ -8,6 +8,7 @@ import Counter from './components/Counter';
 import Contact from './components/Contact';
 import Review from './components/Reviews';
 import Ourwork from './components/Ourwork';
+import Whychooseus from './components/Whychooseus';
 
 export default function Home() {
     return (
@@ -17,11 +18,13 @@ export default function Home() {
             <WhatsApp />
             <Header />
             <Ourwork />
+            <Whychooseus />
             <hr className='horizontal-row' />
             <Counter />
-            <Review />
+            <Review overflow="clip" />
             <hr className='horizontal-row' />
             <Contact />
         </div>
     )
 }
+A
