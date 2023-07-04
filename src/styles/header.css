@@ -174,11 +174,17 @@ tav ul li {
     transition: all 0.7s;
 }
 
+.e-text{
+    z-index: 1;
+}
+
 
 .est-container{
     position: absolute;
     transform: translate(-60%,-40%);
     display: inline;
+    z-index: -1;
+
 }
 
 .est{
@@ -190,11 +196,11 @@ tav ul li {
 
 @keyframes rotate {
     from {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 }
 
