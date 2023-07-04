@@ -5,9 +5,10 @@
     -webkit-column-width: 33%;
     -moz-column-width: 33%;
     column-width: 33%;
-    padding: 0 15px;
+    padding: 50 15px;
     margin-top: 80px;
 }
+
 
 .gallery .pics{
     transition: all 350ms ease;

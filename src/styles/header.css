@@ -11,14 +11,14 @@ body {
     font-weight: lighter;
 }
 
-header {
+.wrapper header {
     width: 100%;
     height: 100vh;
     position: relative;
     align-items: center;
 }
 
-header::before {
+.wrapper header::before {
     content: "";
     position: absolute;
     top: 0;

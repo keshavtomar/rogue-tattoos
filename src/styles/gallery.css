@@ -1,9 +1,16 @@
-.gallery-header::before{
-    display: none;
-    background: none;
-    background-size: 0;
+.gallery-header{
+    width: 100%;
+    position: relative;
+    align-items: center;
 }
 
-.gallery-h{
-    transform: translateY(-90vh);
+.gallery-header::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
 }
+
+

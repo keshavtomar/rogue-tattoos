@@ -38,7 +38,7 @@ function Gallery() {
   return (
     <div>
       <header className='gallery-header'>
-        <tav id="#nav">
+        <tav id="#gnav">
           <div onClick={handleClick} className="menu-icon">
             <MenuIcon />
           </div>
@@ -47,19 +47,17 @@ function Gallery() {
               <Brand />
             </div>
             <ul className={isOpen ? 'showing' : ''}>
-              <li className='bblur'><a className='nav-link' href="/">Home</a></li>
-              <li className='bblur'><a className='nav-link' href="/">About</a></li>
+              <li className='bblur'><a className='nav-link' href="/">← Back to Home</a></li>
+              {/* <li className='bblur'><a className='nav-link' href="/">About</a></li>
               <li className='bblur'><a className='nav-link' href="/">Blog</a></li>
               <li className='bblur'><a className='nav-link' href="/gallery">Gallery</a></li>
-              <li className='bblur'><a className='nav-link' href="/">Contact</a></li>
+              <li className='bblur'><a className='nav-link' href="/">Contact</a></li> */}
             </ul>
           </div>
         </tav>
-
-
-
       </header>
-      <div className='gallery-h'>
+
+      <div className='gallery-h pt-5'>
         <h2>
           <span className='line-pass mt-5'>
             Artful Archive
