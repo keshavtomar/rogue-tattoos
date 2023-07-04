@@ -7,9 +7,16 @@ import Header from './components/Header';
 import Counter from './components/Counter';
 import Contact from './components/Contact';
 import Review from './components/Reviews';
+<<<<<<< HEAD
 import Ourwork from './components/Ourwork';
 import Whychooseus from './components/Whychooseus';
+<<<<<<< HEAD
 import Footer from './components/Footer';
+=======
+=======
+import Footer from './components/Footer';
+>>>>>>> 592e535 (Adding terms & conditions)
+>>>>>>> 79fdc21 (Adding terms & condition)
 
 export default function Home() {
     return (
