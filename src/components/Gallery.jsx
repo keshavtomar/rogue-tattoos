@@ -7,7 +7,7 @@ function Gallery() {
   return (
     <div>
       <h2>
-        <span className='line-pass'>
+        <span className='line-pass mt-5'>
           Artful Archive
         </span>
       </h2>

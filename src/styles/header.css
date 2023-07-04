@@ -175,6 +175,30 @@ tav ul li {
 }
 
 
+.est-container{
+    position: absolute;
+    transform: translate(-60%,-40%);
+    display: inline;
+}
+
+.est{
+    width: 130px;
+    height: 130px;
+    transform-origin: center calc(-50%,-50%);
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 #landing-text1 span {
     opacity: 0;
     animation: fade-in 1s ease-in-out forwards;
@@ -295,6 +319,11 @@ tav ul li {
         right: 50%;
         transform: translateX(-50%);
         bottom:120px;
+    }
+
+    .est{
+        width: 90px;
+        height: 90px;
     }
 
 }

@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Review from './components/Reviews';
 import Ourwork from './components/Ourwork';
 import Whychooseus from './components/Whychooseus';
+import Footer from './components/Footer';
 
 export default function Home() {
     return (
@@ -24,6 +25,7 @@ export default function Home() {
             <Review overflow="clip" />
             <hr className='horizontal-row' />
             <Contact />
+            <Footer />
         </div>
     )
 }
