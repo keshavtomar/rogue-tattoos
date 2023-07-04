@@ -1,0 +1,9 @@
+.gallery-header::before{
+    display: none;
+    background: none;
+    background-size: 0;
+}
+
+.gallery-h{
+    transform: translateY(-90vh);
+}

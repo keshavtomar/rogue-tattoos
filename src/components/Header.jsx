@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
+
 import Brand from './Brand';
 import aboutUs from '../data/content.jsx'
 import FollowUs from './FollowUs';
-import Circulartext from './Circulartext';
 
 export default function Header() {
     const [isOpen, setisOpen] = useState(false);
@@ -88,7 +88,7 @@ export default function Header() {
                         <span>O</span>
                         <span>G</span>
                         <span>U</span>
-                        <span>
+                        <span className='e-text'>
                             E
                             <div className='est-container'>
                                 <img className='est' src='images/download2.svg' alt='established in 2015'></img>

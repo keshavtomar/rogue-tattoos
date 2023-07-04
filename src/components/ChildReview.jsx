@@ -16,18 +16,18 @@ function MyVerticallyCenteredModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+      <Modal.Header closeButton style={{ backgroundColor: "#302e2e" }}>
+        <Modal.Title id="contained-modal-title-vcenter" style={{ color: "white" }}>
           {review.name}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body
-        style={{ display: "flex", "justify-content": "space-evenly" }}
+        style={{ color: "white", backgroundColor: "#302e2e", display: "flex", "justify-content": "space-evenly" }}
       >
         {review.review}
 
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer style={{ backgroundColor: "#302e2e" }}>
 
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>

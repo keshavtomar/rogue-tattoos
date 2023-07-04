@@ -32,25 +32,25 @@ export default function App() {
                 modules={[EffectCoverflow, Pagination, Keyboard]}
             >
                 <SwiperSlide className="gswiper-slide">
-                    <img src="images/bg1.jpg" alt="rogue-tattoos" />
+                    <img src="images/bg1.jpg" alt="rogue-tattoos" loading="lazy" />
                 </SwiperSlide>
                 <SwiperSlide className="gswiper-slide">
-                    <img src="images/bg2.jpg" alt="rogue-tattoos" />
+                    <img src="images/bg2.jpg" alt="rogue-tattoos" loading="lazy" />
                 </SwiperSlide>
                 <SwiperSlide className="gswiper-slide">
-                    <img src="images/bg3.jpg" alt="rogue-tattoos" />
+                    <img src="images/bg3.jpg" alt="rogue-tattoos" loading="lazy" />
                 </SwiperSlide>
                 <SwiperSlide className="gswiper-slide">
-                    <img src="images/bg4.jpg" alt="rogue-tattoos" />
+                    <img src="images/bg4.jpg" alt="rogue-tattoos" loading="lazy" />
                 </SwiperSlide>
                 <SwiperSlide className="gswiper-slide">
-                    <img src="images/bg5.jpg" alt="rogue-tattoos" />
+                    <img src="images/bg5.jpg" alt="rogue-tattoos" loading="lazy" />
                 </SwiperSlide>
                 <SwiperSlide className="gswiper-slide">
-                    <img src="images/bg6.jpg" alt="rogue-tattoos" />
+                    <img src="images/bg6.jpg" alt="rogue-tattoos" loading="lazy" />
                 </SwiperSlide>
                 <SwiperSlide className="gswiper-slide">
-                    <img src="images/bg7.jpg" alt="rogue-tattoos" />
+                    <img src="images/bg7.jpg" alt="rogue-tattoos" loading="lazy" />
                 </SwiperSlide>
             </Swiper >
         </div>
