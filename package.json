@@ -18,10 +18,12 @@
     "kute": "^1.0.0",
     "kute.js": "^2.2.4",
     "react": "^18.2.0",
+    "react-blurhash": "^0.3.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.0",
     "react-scripts": "5.0.1",
+    "sharp": "^0.32.1",
     "styled-components": "^5.3.10",
     "swiper": "^9.4.1",
     "web-vitals": "^2.1.4"
