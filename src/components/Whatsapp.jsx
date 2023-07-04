@@ -44,17 +44,17 @@ export default function Whatsapp() {
             <div id='x' className={expand ? '' : 'cta-hidden'}>
                 <div className='ctaIcon ctaPhone'>
                     <Tooltip title="Call" placement='left' arrow>
-                        <Link className='cta-phone-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><i className="fa-solid fa-phone"></i></Link>
+                        <Link className='cta-phone-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='tel:+91 9971947774'><i className="fa-solid fa-phone"></i></Link>
                     </Tooltip>
                 </div>
                 <div className='ctaIcon ctaWhatsapp'>
                     <Tooltip title="Whatsapp" placement='left' arrow>
-                        <Link className='cta-whatsapp-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><i className="fa-brands fa-whatsapp"></i></Link>
+                        <Link className='cta-whatsapp-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='https://wa.me/+919971947774'><i className="fa-brands fa-whatsapp"></i></Link>
                     </Tooltip>
                 </div>
                 <div className='ctaIcon ctaInstagram'>
                     <Tooltip title="Instagram" placement='left' arrow>
-                        <Link className='cta-instagram-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='localhost:3000'><i className="fa-regular fa-envelope"></i></Link>
+                        <Link className='cta-instagram-link' sx={{ color: 'white', display: 'flex', justifyContent: 'center', marginTop: '3px' }} href='mailto: theroguetattoos@gmail.com'><i className="fa-regular fa-envelope"></i></Link>
                     </Tooltip>
                 </div>
             </div>

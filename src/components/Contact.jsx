@@ -11,7 +11,7 @@ export default function Contact() {
                         Address : B- 1/18- B Paschim Vihar, New Delhi, Pin-code : 110063
                         <div className='details'>
                             <a href="tel:+919971947774" className='cnt mx-3'>P.no : 9971947774 </a>
-                            <a href="tel:+919971947774" className='cnt mx-3'>Email : theroguetattoos@gmail.com</a>
+                            <a href="mailto: theroguetattoos@gmail.com" className='cnt mx-3'>Email : theroguetattoos@gmail.com</a>
                         </div>
                     </div>
                     <div className='d-block'>
