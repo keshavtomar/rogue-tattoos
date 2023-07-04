@@ -3,7 +3,6 @@ import '../styles/ourwork.css'
 
 
 export default function Ourwork() {
-
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
