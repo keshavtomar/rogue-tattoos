@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import '../styles/ourwork.css'
+import React, { useEffect } from 'react';
+import "../styles/ourwork.css";
 
 
 export default function Ourwork() {

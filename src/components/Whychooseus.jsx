@@ -75,6 +75,6 @@ export default function Whychooseus() {
                     <p className='word-define fly-hidden'>Step into an ambiance that exudes both liveliness and tranquility, offering a harmonious and soothing experience.</p>
                 </div>
             </div>
-        </div >
-    )
+        </div>
+    );
 }
