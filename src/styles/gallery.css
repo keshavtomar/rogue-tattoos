@@ -1,6 +1,7 @@
 .gallery-header{
     width: 100%;
     position: relative;
+    height: 30px;
     align-items: center;
 }
 
