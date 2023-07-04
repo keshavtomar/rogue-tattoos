@@ -70,10 +70,10 @@ export default function Header() {
                         </div>
                         <ul className={isOpen ? 'showing' : ''}>
                             <li className='bblur'><a className='nav-link' href="/">Home</a></li>
-                            <li className='bblur'><a className='nav-link' href="/">About</a></li>
-                            <li className='bblur'><a className='nav-link' href="/">Blog</a></li>
+                            <li className='bblur'><a className='nav-link' href="#about-us">About Us</a></li>
+                            <li className='bblur'><a className='nav-link' href="#reviews">Reviews</a></li>
                             <li className='bblur'><a className='nav-link' href="/gallery">Gallery</a></li>
-                            <li className='bblur'><a className='nav-link' href="/">Contact</a></li>
+                            <li className='bblur'><a className='nav-link' href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </tav>
@@ -118,7 +118,7 @@ export default function Header() {
 
 
             <hr className='horizontal-row' />
-            <div className="content">
+            <div className="content" id="about-us">
                 <h2>
                     <span className='line-pass'>
                         About Us

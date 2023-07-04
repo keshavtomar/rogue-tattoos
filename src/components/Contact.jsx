@@ -3,7 +3,7 @@ import '../styles/contact.css'
 
 export default function Contact() {
     return (
-        <div className='section my-5'>
+        <div className='section my-5' id="contact">
             <h2 className='line-pass'>Contact Us</h2>
             <div className='row' style={{ 'width': '100%' }}>
                 <div className='col-lg-8 col-md-12'>

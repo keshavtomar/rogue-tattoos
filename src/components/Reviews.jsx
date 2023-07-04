@@ -62,7 +62,7 @@ export default function Review() {
     }, [isMobile]);
 
     return (
-        <div className="review-section">
+        <div className="review-section" id="reviews">
             <h2>
                 <span className='line-pass'>
                     What our clients say
