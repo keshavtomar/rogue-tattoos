@@ -112,7 +112,7 @@ export default function Header() {
                 <div className='consult'>
                     <p className='glass-effect px-4 d-flex'>Get connected to an expert</p>
                     <a className='glass-effect px-2' style={{ textDecoration: 'none', color: '#A68954' }} href="tel:+919971947774">Call</a>
-                    <a className='glass-effect px-2' style={{ textDecoration: 'none', color: '#A68954' }} href="mailto: theroguetattos@gmail.com">WhatsApp</a>
+                    <a className='glass-effect px-2' style={{ textDecoration: 'none', color: '#A68954' }} href="https://wa.me/+919971947774">WhatsApp</a>
                 </div>
             </header>
 
