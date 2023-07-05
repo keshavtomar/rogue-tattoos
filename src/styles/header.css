@@ -191,7 +191,7 @@ tav ul li {
     width: 130px;
     height: 130px;
     transform-origin: center calc(-50%,-50%);
-    animation: rotate 5s infinite linear;
+    animation: rotate 7s infinite linear;
 }
 
 @keyframes rotate {
