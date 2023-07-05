@@ -181,7 +181,7 @@ tav ul li {
 
 .est-container{
     position: absolute;
-    transform: translate(-60%,-40%);
+    transform: translate(-60%,-35%);
     display: inline;
     z-index: -1;
 
@@ -191,7 +191,7 @@ tav ul li {
     width: 130px;
     height: 130px;
     transform-origin: center calc(-50%,-50%);
-    animation: rotate 7s infinite linear;
+    animation: rotate 9s infinite linear;
 }
 
 @keyframes rotate {

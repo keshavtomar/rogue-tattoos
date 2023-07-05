@@ -91,7 +91,7 @@ export default function Header() {
                         <span className='e-text'>
                             E
                             <div className='est-container'>
-                                <img className='est' src='images/download2.svg' alt='established in 2015'></img>
+                                <img className='est' src='images/download3.svg' alt='established in 2015'></img>
                             </div>
                         </span>
                     </h1>
