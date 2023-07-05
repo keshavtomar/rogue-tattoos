@@ -274,6 +274,7 @@ tav ul li {
 
   .follow-us-container {
     top: 54%;
+    z-index: 1;
   }
 
   .logo {
