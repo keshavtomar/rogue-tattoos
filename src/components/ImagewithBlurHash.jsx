@@ -21,13 +21,17 @@ const ImageWithLoadingPlaceholder = ({ imageData }) => {
                 />
             )}
 
-            <div className='pics'>
+            <div className='pics gallery-images'>
                 <img
+                    className='g-pic'
                     src={"images/gallery/" + imageData.name}
                     alt={imageData.alt}
                     onLoad={handleImageLoad}
                     loading='lazy'
                 />
+                <div className='img-logo'>
+                    <img src='images/blogo.jpg' alt='rogue-tattoos-logo'></img>
+                </div>
             </div>
 
         </>

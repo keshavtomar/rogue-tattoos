@@ -5,6 +5,7 @@ import Footer from './Footer'
 import MenuIcon from '@mui/icons-material/Menu';
 import Brand from './Brand'
 import '../styles/gallery.css'
+import Loader from './Loader';
 
 function Gallery() {
   const [isOpen, setisOpen] = useState(false);
@@ -37,6 +38,7 @@ function Gallery() {
 
   return (
     <div>
+      <Loader />
       <header className='gallery-header'>
         <tav id="#gnav">
           <div onClick={handleClick} className="menu-icon">
