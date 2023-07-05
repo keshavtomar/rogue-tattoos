@@ -1,39 +1,53 @@
 .followUs {
-    writing-mode: vertical-lr;
-    /* text-orientation: upright; */
-    display: flex;
-    border-radius: 0px 5px 5px 0px;
-    transition: all 0.3s;
+  writing-mode: vertical-lr;
+  /* text-orientation: upright; */
+  display: flex;
+  border-radius: 0px 5px 5px 0px;
+  transition: all 0.3s;
 }
 
 .follow-text {
-    margin: 0;
-    color: white;
-    letter-spacing: 3px;
+  margin: 0;
+  color: white;
+  letter-spacing: 3px;
 }
 
-.follow-icons{
-    display: flex;
-    height: 72px;
+.follow-icons {
+  display: flex;
+  height: 72px;
 }
 
-
-.follow-icons a{
-    display: block;
-    padding: 5% 0%;
-    text-decoration: none;
-    color: white;
-    transition: all 0.7s;
+.follow-icons a {
+  display: block;
+  padding: 5% 0%;
+  text-decoration: none;
+  color: white;
+  transition: all 0.7s;
 }
 
-.follow-icons a:hover{
-    color:#A68954;
+#facebook-icon {
+  color: #1877f2;
 }
 
-.blck{
-    box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
-    backdrop-filter: blur(15.5px);
-    -webkit-backdrop-filter: blur(15.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+#instagram-icon {
+  background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#snapchat-icon {
+  color: #fffc00;
+}
+
+.follow-icons a:hover {
+  color: #a68954;
+}
+
+.blck {
+  box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
+  backdrop-filter: blur(15.5px);
+  -webkit-backdrop-filter: blur(15.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../styles/galleryraw.css';
 import images from '../data/images';
 import ImagewithBlurHash from '../components/ImagewithBlurHash';

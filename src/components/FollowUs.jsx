@@ -22,13 +22,13 @@ export default function FollowUs() {
         <div className="followUs" style={{ 'paddingRight': '2px' }}>
             <p className="follow-text py-1">FOLLOW</p>
             <div className="follow-icons">
-                <a href='https://www.facebook.com/theroguetattoos/' target='_blank'>
+                <a id="facebook-icon" href='https://www.facebook.com/theroguetattoos/' target='_blank'>
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href='https://www.instagram.com/theroguetattoos/' target='_blank'>
+                <a id="instagram-icon" href='https://www.instagram.com/theroguetattoos/' target='_blank'>
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href='https://www.instagram.com/theroguetattoos/' target='_blank'>
+                <a id="snapchat-icon" href='https://www.instagram.com/theroguetattoos/' target='_blank'>
                     <i class="fa-brands fa-snapchat"></i>
                 </a>
             </div>

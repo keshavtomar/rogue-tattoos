@@ -69,11 +69,11 @@ export default function Header() {
                             <Brand />
                         </div>
                         <ul className={isOpen ? 'showing' : ''}>
-                            <li className='bblur'><a className='nav-link' href="/">Home</a></li>
-                            <li className='bblur'><a className='nav-link' href="#about-us">About Us</a></li>
-                            <li className='bblur'><a className='nav-link' href="#reviews">Reviews</a></li>
+                            <li className='bblur'><a className='nav-link' href="/" onClick={handleClick}>Home</a></li>
+                            <li className='bblur'><a className='nav-link' href="#about-us" onClick={handleClick}>About Us</a></li>
+                            <li className='bblur'><a className='nav-link' href="#reviews" onClick={handleClick}>Reviews</a></li>
                             <li className='bblur'><a className='nav-link' href="/gallery">Gallery</a></li>
-                            <li className='bblur'><a className='nav-link' href="#contact">Contact</a></li>
+                            <li className='bblur'><a className='nav-link' href="#contact" onClick={handleClick}>Contact</a></li>
                         </ul>
                     </div>
                 </tav>
@@ -110,9 +110,7 @@ export default function Header() {
                 </div>
 
                 <div className='consult'>
-                    <p className='glass-effect px-4 d-flex'>Get connected to an expert</p>
-                    <a className='glass-effect px-2' style={{ textDecoration: 'none', color: '#A68954' }} href="tel:+919971947774">Call</a>
-                    <a className='glass-effect px-2' style={{ textDecoration: 'none', color: '#A68954' }} href="https://wa.me/+919971947774">WhatsApp</a>
+                    <button className='consult-button'>Get Started</button>
                 </div>
             </header>
 
