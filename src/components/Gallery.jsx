@@ -50,10 +50,6 @@ function Gallery() {
             </div>
             <ul className={isOpen ? 'showing' : ''}>
               <li className='bblur'><a className='nav-link' href="/">← Back to Home</a></li>
-              {/* <li className='bblur'><a className='nav-link' href="/">About</a></li>
-              <li className='bblur'><a className='nav-link' href="/">Blog</a></li>
-              <li className='bblur'><a className='nav-link' href="/gallery">Gallery</a></li>
-              <li className='bblur'><a className='nav-link' href="/">Contact</a></li> */}
             </ul>
           </div>
         </tav>
