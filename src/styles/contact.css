@@ -4,6 +4,14 @@
   margin: auto;
 }
 
+.address {
+  margin-bottom: 15px;
+}
+
+.address * {
+  margin: 4px auto;
+}
+
 .details {
   display: block;
   text-align: center;
@@ -16,6 +24,12 @@
 
 .timing {
   line-height: 2rem;
+}
+
+.col-lg-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .map {

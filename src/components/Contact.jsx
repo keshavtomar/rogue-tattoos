@@ -8,7 +8,9 @@ export default function Contact() {
             <div className='row' style={{ 'width': '100%' }}>
                 <div className='col-lg-8 col-md-12'>
                     <div className='address'>
-                        Address : B- 1/18- B Paschim Vihar, New Delhi, Pin-code : 110063
+                        <div>
+                            Address : B- 1/18- B Paschim Vihar, New Delhi, Pin-code : 110063
+                        </div>
                         <div className='details'>
                             <a href="tel:+919971947774" className='cnt mx-3'>P.no : 9971947774 </a>
                             <a href="mailto: theroguetattoos@gmail.com" className='cnt mx-3'>Email : theroguetattoos@gmail.com</a>
