@@ -21,7 +21,7 @@
 .map {
   width: 650px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   height: 350px;
   transition: all 0.7s;
   filter: invert(100%);
