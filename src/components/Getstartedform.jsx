@@ -19,6 +19,22 @@ export default function Getstartedform() {
         }
     }
 
+    const handleScroll = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        const followUsElement = document.querySelector('tav');
+
+        if (followUsElement) {
+            if (scrollTop > 0) {
+                followUsElement.classList.add('glass-effect');
+            } else {
+                followUsElement.classList.remove('glass-effect');
+            }
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     const updateLabels = () => {
         const labels = document.querySelectorAll('.form-control label');
 
@@ -50,7 +66,7 @@ export default function Getstartedform() {
         <div className="form-section">
             <Loader />
             <header className='gallery-header'>
-                <tav id="#gnav">
+                <tav id="fnav">
                     <div onClick={handleClick} className="menu-icon">
                         <MenuIcon />
                     </div>
@@ -72,16 +88,15 @@ export default function Getstartedform() {
                 </div>
                 <div className="form-control">
                     <input type="text" required />
-                    <label>first&nbsp;name</label>
-                </div>
-
-                <div className="form-control">
-                    <input type="text" required />
-                    <label>last&nbsp;name</label>
+                    <label>Full&nbsp;name</label>
                 </div>
                 <div className="form-control">
                     <input type="text" required />
                     <label>Mobile&nbsp;no.</label>
+                </div>
+                <div className="form-control">
+                    <input type="text" required />
+                    <label>Email&nbsp;id</label>
                 </div>
                 <div className="form-control" style={{ display: 'flex', justifyContent: 'flex-end', alignContent: 'flex-end' }}>
                     <label>WhatsApp</label>

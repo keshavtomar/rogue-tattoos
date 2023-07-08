@@ -1,4 +1,5 @@
-.eye {
+.eye1,
+.eye2 {
   position: relative;
   display: inline-block;
   border-radius: 50%;
@@ -7,7 +8,8 @@
   background: #ccc;
 }
 
-.eye:after {
+.eye1:after,
+.eye2:after {
   /*pupil*/
   position: absolute;
   bottom: 17px;
