@@ -95,7 +95,7 @@ export default function Getstartedform() {
                     <label>Mobile&nbsp;no.</label>
                 </div>
                 <div className="form-control">
-                    <input type="text" required />
+                    <input type="text" />
                     <label>Email&nbsp;id</label>
                 </div>
                 <div className="form-control" style={{ display: 'flex', justifyContent: 'flex-end', alignContent: 'flex-end' }}>
