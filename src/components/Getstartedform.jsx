@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/getstartedform.css'
 import Loader from './Loader'
+import { useNavigate } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import Brand from './Brand';
 import Footer from './Footer';
@@ -8,6 +9,19 @@ import MouseFollowingEyes from './MouseFollowingEyes';
 
 
 export default function Getstartedform() {
+    const [formData, setFormData] = useState({
+        fullname: "",
+        email:"",
+        mobile:"",
+        isWhatsApp:"",
+        message:"",
+        date:"",
+        time:"",
+    })
+    const navigate = useNavigate();
+    const setVal = (e) =>{
+        setFormData({...formData, [e.target.name]:e.target.value});
+    }
 
     const [isOpen, setisOpen] = useState(false);
     const handleClick = () => {
@@ -62,6 +76,43 @@ export default function Getstartedform() {
         setisWhatsappAllowed(!isWhatsappAllowed);
     }
 
+    const handleFormSubmit = async (e) =>{
+        e.preventDefault();
+        const date = new Date();
+        const currDate = date.getDate().toString().padStart(2, '0')+"/"+(date.getMonth() + 1).toString().padStart(2, '0')+"/"+date.getFullYear().toString();
+        const currTime = date.getHours().toString().padStart(2, '0')+":"+date.getMinutes().toString().padStart(2,'0');
+        
+        formData.isWhatsApp = isWhatsappAllowed;
+        formData.date = currDate;
+        formData.time = currTime;
+
+        const data = await fetch(`http://localhost:5001/save`, {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+            },
+            body:JSON.stringify(formData),
+        });
+
+        const response = await data.json();
+
+        if(response.message === "successs"){
+            setFormData({
+                fullname:"",
+                email:"",
+                mobile:"",
+                isWhatsApp:"",
+                message:"",
+                date:"",
+                time:"",
+            });
+            navigate("/");
+
+        }
+
+    }
+
+
     return (
         <div className="form-section">
             <Loader />
@@ -87,15 +138,15 @@ export default function Getstartedform() {
                     <MouseFollowingEyes />
                 </div>
                 <div className="form-control">
-                    <input type="text" required />
+                    <input type="text" required name='fullname' value={formData.value} onChange={setVal}/>
                     <label>Full&nbsp;name</label>
                 </div>
                 <div className="form-control">
-                    <input type="text" required />
+                    <input type="text" required name='mobile' value={formData.value} onChange={setVal}/>
                     <label>Mobile&nbsp;no.</label>
                 </div>
                 <div className="form-control">
-                    <input type="text" required />
+                    <input type="text" required name='email' value={formData.value} onChange={setVal}/>
                     <label>Email&nbsp;id</label>
                 </div>
                 <div className="form-control" style={{ display: 'flex', justifyContent: 'flex-end', alignContent: 'flex-end' }}>
@@ -103,10 +154,10 @@ export default function Getstartedform() {
                     <input className='chkbox' checked={isWhatsappAllowed} onChange={handleCheckboxchange} style={{ height: '20px', width: '20px', position: 'relative', top: '13px', backgroundColor: isWhatsappAllowed ? '#a68954' : '', display: 'flex', justifyContent: 'flex-end' }} type="checkbox" />
                 </div>
                 <div className="form-control" style={{ width: '85%' }}>
-                    <input type="text" required />
+                    <input type="text" required name='message' value={formData.value} onChange={setVal}/>
                     <label>Write&nbsp;a&nbsp;Message&nbsp;for&nbsp;us</label>
                 </div>
-                <button className='form-submit-button'>Get a Callback</button>
+                <button className='form-submit-button' onClick={handleFormSubmit}>Get a Callback</button>
             </div>
         </div>
     )
