@@ -208,6 +208,7 @@ tav ul li {
 .est-container {
   position: absolute;
   transform: translate(-60%, -35%);
+  -webkit-transform: translate(-60%, -35%);
   display: inline;
   z-index: -1;
 }
