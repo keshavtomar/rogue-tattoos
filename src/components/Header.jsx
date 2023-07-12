@@ -27,7 +27,7 @@ export default function Header() {
     }
 
     const handleScroll = () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
         const tabElement = document.querySelector('tav');
 

@@ -3,7 +3,7 @@ import '../styles/followUs.css'
 
 export default function FollowUs() {
     const handleScroll = () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
         const followUsElement = document.querySelector('.followUs');
 
