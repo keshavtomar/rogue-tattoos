@@ -67,7 +67,7 @@ export default function Header() {
     return (
         <div className="wrapper">
             <header>
-                <tav id="#nav">
+                <tav id="#nav" className={isOpen ? 'glass-effect' : ''}>
                     <div onClick={handleClick} className="menu-icon">
                         <MenuIcon />
                     </div>

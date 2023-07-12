@@ -40,7 +40,7 @@ function Gallery() {
     <div>
       <Loader />
       <header className='gallery-header'>
-        <tav id="#gnav">
+        <tav id="#gnav" className={isOpen ? 'glass-effect' : ''}>
           <div onClick={handleClick} className="menu-icon">
             <MenuIcon />
           </div>

@@ -120,7 +120,7 @@ export default function Getstartedform() {
         <div className="form-section">
             <Loader />
             <header className='gallery-header'>
-                <tav id="fnav">
+                <tav id="fnav" className={isOpen ? 'glass-effect' : ''}>
                     <div onClick={handleClick} className="menu-icon">
                         <MenuIcon />
                     </div>
