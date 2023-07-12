@@ -4,7 +4,6 @@ import Loader from './Loader'
 import { useNavigate } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import Brand from './Brand';
-import Footer from './Footer';
 import MouseFollowingEyes from './MouseFollowingEyes';
 
 
@@ -94,7 +93,8 @@ export default function Getstartedform() {
             body: JSON.stringify(formData),
         });
 
-        const response = await data.json();
+        const response = await data.json().then(console.log(data));
+
 
         if (response.message === "successs") {
             setFormData({
@@ -106,8 +106,11 @@ export default function Getstartedform() {
                 date: "",
                 time: "",
             });
+            console.log("Data successfully submitted");
             navigate("/");
-
+        }
+        else {
+            console.log("Not done");
         }
 
     }
@@ -142,7 +145,7 @@ export default function Getstartedform() {
                     <label>Full&nbsp;name</label>
                 </div>
                 <div className="form-control">
-                    <input type="text" required name='mobile' value={formData.value} onChange={setVal} />
+                    <input type="number" required name='mobile' value={formData.value} onChange={setVal} />
                     <label>Mobile&nbsp;no.</label>
                 </div>
                 <div className="form-control">
