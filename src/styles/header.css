@@ -201,6 +201,7 @@ tav ul li {
 }
 
 .e-text {
+  position: relative;
   z-index: 1;
 }
 
