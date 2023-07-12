@@ -85,7 +85,7 @@ export default function Getstartedform() {
         formData.date = currDate;
         formData.time = currTime;
 
-        const data = await fetch(`http://localhost:5001/save`, {
+        const data = await fetch(`https://rogue-tattoos-api.onrender.com/save`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
