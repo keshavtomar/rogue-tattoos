@@ -30,6 +30,7 @@
 }
 
 #instagram-icon {
+  background: -webkit-linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
   background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
   background-clip: text;
   -webkit-background-clip: text;
