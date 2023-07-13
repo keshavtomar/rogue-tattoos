@@ -107,3 +107,7 @@ input:checked {
 #fnav {
   z-index: 10000;
 }
+
+.ToastContainer {
+  color: #a68954;
+}
