@@ -102,7 +102,6 @@ export default function Getstartedform() {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-        notify();
         const date = new Date();
         const currDate = date.getDate().toString().padStart(2, '0') + "/" + (date.getMonth() + 1).toString().padStart(2, '0') + "/" + date.getFullYear().toString();
         const currTime = date.getHours().toString().padStart(2, '0') + ":" + date.getMinutes().toString().padStart(2, '0');
@@ -111,6 +110,15 @@ export default function Getstartedform() {
         formData.date = currDate;
         formData.time = currTime;
 
+        if (formData.fullname === "" || formData.mobile === "") {
+            toast("Some required fields are empty e.g. Name or Mobile No.", {
+                autoClose: 2000,
+                type: "warning"
+            })
+            return;
+        }
+
+        notify();
         const data = await fetch(`https://rogue-tattoos-api.onrender.com/save`, {
             method: "POST",
             headers: {
