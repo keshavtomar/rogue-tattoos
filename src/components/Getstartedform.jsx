@@ -151,6 +151,8 @@ export default function Getstartedform() {
     }
 
 
+
+
     return (
         <div className="form-section">
             <Loader />
@@ -176,11 +178,11 @@ export default function Getstartedform() {
                     <MouseFollowingEyes />
                 </div>
                 <div className="form-control">
-                    <input type="text" required name='fullname' value={formData.fullname} onChange={setVal} />
+                    <input required type="text" name='fullname' value={formData.fullname} onChange={setVal} />
                     <label>Full&nbsp;name</label>
                 </div>
                 <div className="form-control">
-                    <input id='number-input' type="number" required name='mobile' value={formData.mobile} onChange={setVal} />
+                    <input id='number-input' type="number" required name='mobile' value={formData.mobile} onChange={setVal} maxLength="13" />
                     <label>Mobile&nbsp;no.</label>
                 </div>
                 <div className="form-control">
@@ -192,7 +194,7 @@ export default function Getstartedform() {
                     <input className='chkbox' checked={isWhatsappAllowed} onChange={handleCheckboxchange} style={{ height: '20px', width: '20px', position: 'relative', top: '13px', backgroundColor: isWhatsappAllowed ? '#a68954' : '', display: 'flex', justifyContent: 'flex-end' }} type="checkbox" />
                 </div>
                 <div className="form-control" style={{ width: '85%' }}>
-                    <input type="text" required name='message' value={formData.message} onChange={setVal} />
+                    <input type="text" required name='message' value={formData.message} onChange={setVal} max={16} />
                     <label>Write&nbsp;a&nbsp;Message&nbsp;for&nbsp;us</label>
                 </div>
                 <button className='form-submit-button' onClick={handleFormSubmit}>Get a Callback</button>

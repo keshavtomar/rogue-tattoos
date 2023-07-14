@@ -1,100 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 
-.review-section{
-    margin:80px;
+.review-section {
+  margin: 80px;
 }
 
-.reviews{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;   
-    align-items: start;
-    justify-content: space-around;
-    transition: all 0.7s;
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  transition: all 0.7s;
 }
 
 .review-card {
-    font-family: "Roboto", sans-serif;
-    align-self: flex-start;
-    font-weight: 300;
-    background-color: #27374d;
-    color: white;
-    width: 265px;
-    border-radius: 20px;
-    border:0px;
-    padding: 15px;
-    margin: 8px 5px;
-    text-align: center;
-    transition: all 0.7s;
+  font-family: "Roboto", sans-serif;
+  align-self: flex-start;
+  font-weight: 300;
+  background-color: #27374d;
+  color: white;
+  width: 265px;
+  border-radius: 20px;
+  border: 0px;
+  padding: 15px;
+  margin: 8px 5px;
+  text-align: center;
+  transition: all 0.7s;
 }
 
-.review-card .fly-hidden{
-    height: 130px;
-    align-items: center;
+.review-card .fly-hidden {
+  height: 130px;
+  align-items: center;
 }
 
-.review-card a{
-    color: #A68954;
+.review-card a {
+  color: #a68954;
 }
 
-.zoomOff{
-    transform: scale(1.2);
+.zoomOff {
+  transform: scale(1.2);
 }
 
 .avatar {
-    align-items: center;
-    margin: auto;
+  align-items: center;
+  margin: auto;
 }
 
 .review-card-name {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .review-card-date {
-    font-size: 0.8rem;
-    font-weight: 5;
-    margin-top: 5px;
+  font-size: 0.8rem;
+  font-weight: 5;
+  margin-top: 5px;
 }
 
-.review-link{
-    display: block;
-    text-decoration: none;
-    margin-bottom: 1rem;
+.review-link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 1rem;
 }
 
-.review-p{
-    margin-bottom: 0;
+.review-p {
+  margin-bottom: 0;
 }
 
-@media(min-width:764px) {
-        .review-card:hover {
-            transform: scale(1.2);
-            z-index: 1;
-            box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
-        }
-    }
-    
-    @media (max-width: 764px) {
-        .review-section{
-            margin: 0px;
-            overflow: hidden;
-        }
-        .review-card{
-            width: 240px;
-            margin: 0px 0px;
-        }
+@media (min-width: 764px) {
+  .review-card:hover {
+    transform: scale(1.2);
+    z-index: 1;
+    box-shadow: 0 8px 32px 0 rgb(37, 37, 39);
+  }
 }
 
+@media (max-width: 764px) {
+  .review-section {
+    margin: 0px;
+    overflow: hidden;
+  }
+  .review-card {
+    width: 240px;
+    margin: 0px 0px;
+  }
+}
 
 .cswiper {
-    width: 240px;
-    height: auto;
+  width: 240px;
+  height: auto;
 }
 
 .cswiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  color: #fff;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-header .btn-close {
+  display: none;
 }

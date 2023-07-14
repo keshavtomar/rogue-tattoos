@@ -12,6 +12,7 @@ function MyVerticallyCenteredModal(props) {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            style={{ backdropFilter: 'blur(5px)' }}
         >
             <Modal.Header closeButton style={{ backgroundColor: "#302e2e" }}>
                 <Modal.Title id="contained-modal-title-vcenter" style={{ color: "white" }}>
@@ -52,14 +53,20 @@ function Footer() {
                     <div class="wave" id="wave3"></div>
                     <div class="wave" id="wave4"></div>
                 </div>
-                <p>&copy;2015 The Rogue Tattoos | </p>
-                <p>All Rights Reserved |&nbsp; </p>
-                <p style={{ "cursor": "pointer" }} onClick={() => (modalShow ? null : handleShow())}> Terms and Conditions </p>
                 <MyVerticallyCenteredModal
                     show={modalShow}
                     onHide={() => setModalShow(false)}
                 />
-            </footer>
+                <div className="px-4" style={{ borderRight: "1px solid white" }}>
+                    <p style={{ "cursor": "pointer", margin: "0" }} onClick={() => (modalShow ? null : handleShow())} > Terms and Conditions</p>
+                </div>
+                <div className="px-4" style={{ borderRight: "1px solid white" }}>
+                    <p className="my-0">&copy;2015 The Rogue Tattoos</p>
+                </div>
+                <div className="px-4">
+                    <p className="my-0">All Rights Reserved  </p>
+                </div>
+            </footer >
         </div >
     )
 }
