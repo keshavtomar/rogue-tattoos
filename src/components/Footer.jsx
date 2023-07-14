@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../styles/footer.css';
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -42,6 +42,23 @@ function MyVerticallyCenteredModal(props) {
 
 
 function Footer() {
+
+    const [isMobile, setisMobile] = useState(window.innerWidth < 768);
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            setisMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    })
+
+
     const [modalShow, setModalShow] = useState(false);
     const handleShow = () => setModalShow(true);
     return (
@@ -57,13 +74,13 @@ function Footer() {
                     show={modalShow}
                     onHide={() => setModalShow(false)}
                 />
-                <div className="px-4" style={{ borderRight: "1px solid white" }}>
-                    <p style={{ "cursor": "pointer", margin: "0" }} onClick={() => (modalShow ? null : handleShow())} > Terms and Conditions</p>
+                <div className={isMobile ? "px-2" : "px-4"} style={{ borderRight: "1px solid white" }}>
+                    <p style={{ "cursor": "pointer", margin: "0" }} onClick={() => (modalShow ? null : handleShow())} > Terms &amp; Conditions</p>
                 </div>
-                <div className="px-4" style={{ borderRight: "1px solid white" }}>
+                <div className={isMobile ? "px-2" : "px-4"} style={{ borderRight: "1px solid white" }}>
                     <p className="my-0">&copy;2015 The Rogue Tattoos</p>
                 </div>
-                <div className="px-4">
+                <div className={isMobile ? "px-2" : "px-4"} >
                     <p className="my-0">All Rights Reserved  </p>
                 </div>
             </footer >
