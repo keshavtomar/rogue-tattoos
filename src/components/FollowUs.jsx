@@ -28,7 +28,7 @@ export default function FollowUs() {
                 <a id="instagram-icon" href='https://www.instagram.com/theroguetattoos/' target='_blank'>
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a id="snapchat-icon" href='https://www.instagram.com/theroguetattoos/' target='_blank'>
+                <a id="snapchat-icon" href='https://www.snapchat.com/add/smartist1?share_id=H9BRMO_S5Ew&locale=en-IN' target='_blank'>
                     <i class="fa-brands fa-snapchat"></i>
                 </a>
             </div>
