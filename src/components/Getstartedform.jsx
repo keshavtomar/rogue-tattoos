@@ -6,6 +6,8 @@ import Brand from './Brand';
 import MouseFollowingEyes from './MouseFollowingEyes';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { OverlayTrigger } from 'react-bootstrap';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 
 export default function Getstartedform() {
@@ -178,7 +180,7 @@ export default function Getstartedform() {
                     <label>Full&nbsp;name</label>
                 </div>
                 <div className="form-control">
-                    <input type="number" required name='mobile' value={formData.mobile} onChange={setVal} />
+                    <input id='number-input' type="number" required name='mobile' value={formData.mobile} onChange={setVal} />
                     <label>Mobile&nbsp;no.</label>
                 </div>
                 <div className="form-control">
