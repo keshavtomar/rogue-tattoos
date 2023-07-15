@@ -24,7 +24,7 @@ export default function Getstartedform() {
                 autoClose: 2000,
                 closeButton: null
             })
-        }, 8000);
+        }, 9000);
     }
 
     const update = (ob) => {
