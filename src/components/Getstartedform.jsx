@@ -193,7 +193,7 @@ export default function Getstartedform() {
                     <label>WhatsApp</label>
                     <input className='chkbox' checked={isWhatsappAllowed} onChange={handleCheckboxchange} style={{ height: '20px', width: '20px', position: 'relative', top: '13px', backgroundColor: isWhatsappAllowed ? '#a68954' : '', display: 'flex', justifyContent: 'flex-end' }} type="checkbox" />
                 </div>
-                <div className="form-control" >
+                <div className="form-control" style={{ width: '100%' }}>
                     <input type="text" required name='message' value={formData.message} onChange={setVal} />
                     <label>Comments</label>
                 </div>
