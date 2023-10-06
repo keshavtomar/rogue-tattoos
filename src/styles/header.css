@@ -36,27 +36,31 @@ body {
   /* transform: translateY(-50%); */
 }
 
+.consult-container {
+  display: inline-flex;
+  bottom: 15vh;
+  position: absolute;
+  flex-wrap: wrap;
+  width: 422px;
+  justify-content: space-between;
+}
+
 .consult {
-  width: 130px;
-  display: flex;
+  width: 170px;
   flex-wrap: wrap;
   justify-content: space-between;
   color: #a68954;
-  position: relative;
-  bottom: 110px;
-  left: 90px;
-  justify-content: center;
   /* backdrop-filter: blur(15.5px); */
 }
 
-.consult-button {
+.consult-button1, .consult-button2 {
   display: flex;
   position: relative;
   font-weight: 2em;
   align-items: center;
   padding: auto 4px;
   background-color: transparent;
-  width: 128px;
+  width: 170px;
   height: 50px;
   /* box-shadow: 0 8px 10px 0 rgb(37, 37, 39); */
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -67,6 +71,16 @@ body {
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: all 0.3s;
+}
+
+.button-text-first {
+  position: absolute;
+  left: 28px;
+}
+
+.button-text {
+  position: absolute;
+  left: 10px;
 }
 
 .gs-icon {
@@ -83,7 +97,10 @@ body {
   transition: all 0.3s;
 }
 
-.consult-button:hover .gs-icon {
+.consult-button1:hover .gs-icon {
+  width: calc(100% - 0.6em);
+}
+.consult-button2:hover .gs-icon {
   width: calc(100% - 0.6em);
 }
 
@@ -239,6 +256,12 @@ tav ul li {
   animation: fade-in 1s ease-in-out forwards;
 }
 
+.consult-button1, .consult-button2 {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -285,6 +308,13 @@ tav ul li {
 }
 #landing-text2 span:nth-child(7) {
   animation-delay: 4.6s;
+}
+
+.consult-button1{
+  animation-delay: 4.9s;
+}
+.consult-button2{
+  animation-delay: 5.2s;
 }
 
 @media (max-width: 764px) {
@@ -344,13 +374,6 @@ tav ul li {
     letter-spacing: 2px;
   }
 
-  .consult {
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
-    bottom: 170px;
-  }
-
   .est {
     width: 90px;
     height: 90px;
@@ -359,6 +382,18 @@ tav ul li {
   .brand-impression {
     position: relative;
     bottom: 50px;
+  }
+
+  .consult-container {
+    width: 300px;
+    justify-content: center;
+    bottom: 18vh;
+  }
+
+  .consult-button2{
+    position: relative;
+    left: 0;
+    top: 20px;
   }
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../styles/header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -114,15 +114,34 @@ export default function Header() {
                         </h1>
 
                     </div>
+                    <div className='consult-container'>
+                        <div className='consult' onClick={handleStarted}>
+                            <button className='consult-button1'>
+                                <div className='button-text-first' style={{color:"white"}}>
+                                    Get Started
+                                </div>
+                                <div class="gs-icon">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="#fff"></path></svg>
+                                </div>
+                            </button>
+                        </div>
+                        <div className='consult' id='gallery-button' >
+                            <Link className='consult-button2' style={{ color: "white", textDecoration: "none", position:"relative", right:"8px" }} to="/gallery">
+                                <div className='button-text'>
+                                    Explore Designs
+                                </div>
+                                <div class="gs-icon">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="#fff"></path></svg>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div className='consult' onClick={handleStarted}>
-                    <button className='consult-button'>Get Started
-                        <div class="gs-icon">
-                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="#fff"></path></svg>
-                        </div>
-                    </button>
-                </div>
+
+
+
             </header>
 
 
