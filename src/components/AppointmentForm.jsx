@@ -6,6 +6,7 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 export default function AppointmentForm() {
   const handle = useFullScreenHandle();
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
   const [data, setData] = useState({
     name: "",
@@ -32,13 +33,16 @@ export default function AppointmentForm() {
     const updatedData = { ...data, date: date.toISOString() };
     console.log("Form data submitted:", updatedData);
     try {
-      const response = await fetch(`https://rogue-tattoos-api.onrender.com/appointment`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedData),
-      });
+      const response = await fetch(
+        `https://rogue-tattoos-api.onrender.com/appointment`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedData),
+        }
+      );
 
       if (response.ok) {
         toast.success("Submission Successfull");
@@ -58,15 +62,33 @@ export default function AppointmentForm() {
     setLoading(false);
   };
 
+  const handleFullScreenChange = (state) => {
+    console.log(state);
+    setIsFullScreen(state);
+  };
+
   return (
     <div>
       <button
-        style={{ position: "absolute", zIndex: "1000", backgroundColor:"rgb(3,3,4,0)", right:'10px', top:'10px', borderRadius:'50%', height:'35px', border:'none'}}
+        style={{
+          position: "absolute",
+          zIndex: "1000",
+          backgroundColor: "rgb(3,3,4,0)",
+          right: "10px",
+          top: "10px",
+          borderRadius: "50%",
+          height: "35px",
+          border: "none",
+        }}
         onClick={handle.enter}
       >
-        <img src="images/FullScreen.svg" alt="full-screen" style={{objectFit:'contain', width:'20px'}}/>
+        <img
+          src="images/FullScreen.svg"
+          alt="full-screen"
+          style={{ objectFit: "contain", width: "20px" }}
+        />
       </button>
-      <FullScreen handle={handle}>
+      <FullScreen handle={handle} onChange={handleFullScreenChange}>
         <div className="appointment">
           <div className="background-container">
             <img
@@ -78,6 +100,17 @@ export default function AppointmentForm() {
             <div className="af-clouds"></div>
 
             <div className="unique-form-container">
+              <div
+                className="est-container2"
+                style={isFullScreen ? { bottom: "-50px" } : { bottom: "-20px" }}
+              >
+                <img
+                  className="est2"
+                  id="est2"
+                  src="images/stamp.png"
+                  alt="established in 2015"
+                ></img>
+              </div>
               <form onSubmit={handleSubmit}>
                 <div className="unique-form-input-blocks">
                   <div className="left-inputs">
@@ -183,13 +216,6 @@ export default function AppointmentForm() {
                 </div>
               </form>
             </div>
-          </div>
-          <div className="est-container2">
-            <img
-              className="est2"
-              src="images/stamp.svg"
-              alt="established in 2015"
-            ></img>
           </div>
           <ToastContainer />
         </div>
