@@ -39,7 +39,7 @@ export default function AdminPage() {
       );
       if (!confirmed) return;
       // Perform delete API call
-      const response = await fetch(`http://localhost:5001/appointments/${id}`, {
+      const response = await fetch(`https://rogue-tattoos-api.onrender.com/appointments/${id}`, {
         method: "DELETE",
       });
 
