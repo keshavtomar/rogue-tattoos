@@ -1,0 +1,60 @@
+.ad-admin-page {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .ad-appointments-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .ad-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ad-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ad-card-title {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+  }
+  
+  .ad-card-text {
+    margin: 5px 0;
+    color: #000;
+  }
+  
+
+  /* HTML: <div class="loader"></div> */
+.loader2 {
+    width: 100px;
+    height: 45px;
+    position: relative;
+  }
+  .loader2:before,
+  .loader2:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;    
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(-50px -20px,10% -12px,20% 0,calc(50% - 15px) 0,calc(50% - 10px) -20px,calc(50% - 8px) -15px,calc(50% + 8px) -15px,calc(50% + 10px) -20px,calc(50% + 15px) 0,80% 0,90% -12px,calc(100% + 50px) -20px,100% 80%,calc(100% + 10px) calc(100% + 10px),60% 100%,50% calc(100% + 15px),40% 100%,-10px calc(100% + 10px),0 80%);
+  }
+  .loader2:after {
+    animation: l9 1s infinite;
+    transform: perspective(300px) translateZ(0px)
+  }
+  @keyframes l9 {
+    to {transform:perspective(300px) translateZ(100px);opacity:0}
+  }

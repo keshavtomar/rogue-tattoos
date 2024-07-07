@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../styles/footer.css';
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import TermsNConditions from "./TermsNConditions";
 
 function MyVerticallyCenteredModal(props) {
 
@@ -59,8 +60,7 @@ function Footer() {
     })
 
 
-    const [modalShow, setModalShow] = useState(false);
-    const handleShow = () => setModalShow(true);
+
     return (
         <div className='footer-container'>
             <footer class="footer">
@@ -70,12 +70,8 @@ function Footer() {
                     <div class="wave" id="wave3"></div>
                     <div class="wave" id="wave4"></div>
                 </div>
-                <MyVerticallyCenteredModal
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
-                />
                 <div className={isMobile ? "px-2" : "px-4"} style={{ borderRight: "1px solid white" }}>
-                    <p style={{ "cursor": "pointer", margin: "0" }} onClick={() => (modalShow ? null : handleShow())} > Terms &amp; Conditions</p>
+                    <TermsNConditions/>
                 </div>
                 <div className={isMobile ? "px-2" : "px-4"} style={{ borderRight: "1px solid white" }}>
                     <p className="my-0">&copy;2015 The Rogue Tattoos</p>

@@ -5,7 +5,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import MoodIcon from '@mui/icons-material/Mood';
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
 
-// for every class I have used cbefore it, to distinguish that it's a counter class
+// for every class I have used before it, to distinguish that it's a counter class
 
 function ScrollIntoViewTrigger({ onScrollIntoView }) {
     const targetRef = useRef(null);
