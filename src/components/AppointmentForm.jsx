@@ -41,7 +41,7 @@ export default function AppointmentForm() {
       });
 
       if (response.ok) {
-        toast.success("Appointment successfully Submitted");
+        toast.success("Submission Successful");
         setData({
           name: "",
           dob: "",
