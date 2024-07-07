@@ -6,8 +6,10 @@ import AppointmentCard from "./AppointmentCard";
 
 export default function AdminPage() {
   const [appointments, setAppointments] = useState([]);
+  const [filteredAppointments, setFilteredAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const fetchAppointments = async () => {
     try {
@@ -19,6 +21,7 @@ export default function AdminPage() {
       }
       const data = await response.json();
       setAppointments(data);
+      setFilteredAppointments(data); // Initialize filteredAppointments with all appointments
       toast.success("Appointments successfully fetched!");
     } catch (error) {
       setError(error);
@@ -31,6 +34,14 @@ export default function AdminPage() {
   useEffect(() => {
     fetchAppointments();
   }, []);
+
+  useEffect(() => {
+    // Filter appointments based on search query
+    const filtered = appointments.filter(appointment =>
+      appointment.phone.includes(searchQuery)
+    );
+    setFilteredAppointments(filtered);
+  }, [searchQuery, appointments]);
 
   const handleDelete = async (id) => {
     try {
@@ -64,8 +75,8 @@ export default function AdminPage() {
         }}
       >
         <div
-          class="loader2"
-          style={{ top: "50%", left: "50%", translate: "-50% -50%" }}
+          className="loader2"
+          style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
         ></div>
       </div>
     );
@@ -75,9 +86,17 @@ export default function AdminPage() {
   return (
     <div className="ad-admin-page">
       <h1>Appointments</h1>
+      <input
+        type="text"
+        placeholder="Search by phone number"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="ad-search-bar"
+        style={{margin:"10px auto", borderRadius:'5px'}}
+      />
       <div className="ad-appointments-list">
-        {appointments.length > 0 ? (
-          appointments.map((appointment) => (
+        {filteredAppointments.length > 0 ? (
+          filteredAppointments.map((appointment) => (
             <AppointmentCard
               key={appointment.id}
               appointment={appointment}
