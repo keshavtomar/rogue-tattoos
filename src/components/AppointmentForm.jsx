@@ -67,31 +67,8 @@ export default function AppointmentForm() {
     setIsFullScreen(state);
   };
 
-  const handleFocus = () => {
-    if (formContainerRef.current) {
-      formContainerRef.current.classList.add("move-up");
-    }
-  };
+ 
 
-  const handleBlur = () => {
-    if (formContainerRef.current) {
-      formContainerRef.current.classList.remove("move-up");
-    }
-  };
-
-  useEffect(() => {
-    const input = document.getElementById("unique-name");
-    if (input) {
-      input.addEventListener("focus", handleFocus);
-      input.addEventListener("blur", handleBlur);
-    }
-    return () => {
-      if (input) {
-        input.removeEventListener("focus", handleFocus);
-        input.removeEventListener("blur", handleBlur);
-      }
-    };
-  }, []);
 
   return (
     <div>
