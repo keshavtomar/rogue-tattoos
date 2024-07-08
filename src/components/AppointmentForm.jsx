@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/appointment.css";
 import { toast, ToastContainer } from "react-toastify";
 import TermsNConditions from "./TermsNConditions";
@@ -7,6 +7,7 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 export default function AppointmentForm() {
   const handle = useFullScreenHandle();
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const formContainerRef = useRef(null);
 
   const [data, setData] = useState({
     name: "",
@@ -63,9 +64,34 @@ export default function AppointmentForm() {
   };
 
   const handleFullScreenChange = (state) => {
-    console.log(state);
     setIsFullScreen(state);
   };
+
+  const handleFocus = () => {
+    if (formContainerRef.current) {
+      formContainerRef.current.classList.add("move-up");
+    }
+  };
+
+  const handleBlur = () => {
+    if (formContainerRef.current) {
+      formContainerRef.current.classList.remove("move-up");
+    }
+  };
+
+  useEffect(() => {
+    const input = document.getElementById("unique-name");
+    if (input) {
+      input.addEventListener("focus", handleFocus);
+      input.addEventListener("blur", handleBlur);
+    }
+    return () => {
+      if (input) {
+        input.removeEventListener("focus", handleFocus);
+        input.removeEventListener("blur", handleBlur);
+      }
+    };
+  }, []);
 
   return (
     <div>
@@ -99,7 +125,7 @@ export default function AppointmentForm() {
             <div className="af-twinkling"></div>
             <div className="af-clouds"></div>
 
-            <div className="unique-form-container">
+            <div className="unique-form-container" ref={formContainerRef}>
               <div
                 className="est-container2"
                 style={isFullScreen ? { bottom: "-50px" } : { bottom: "-20px" }}
@@ -123,7 +149,7 @@ export default function AppointmentForm() {
                       </label>
                       <input
                         type="text"
-                        className="unique-form-input"
+                        className="unique-form-input listen-click"
                         id="unique-name"
                         name="name"
                         value={data.name}

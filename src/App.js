@@ -10,7 +10,7 @@ import AdminLogin from "./components/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <Router>
@@ -18,17 +18,19 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/getstarted" element={<Getstartedform />} />
-        <Route path="/appointment" element={
-          <ProtectedRoute isLoggedIn={isLoggedIn}>
-            <AppointmentForm />
-          </ProtectedRoute>
-        } />
-        <Route path="/admin" element={
-          <ProtectedRoute isLoggedIn={isLoggedIn}>
-            <Admin />
-          </ProtectedRoute>
-        } />
-        <Route path="/login" element={<AdminLogin setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/appointment" element={<AppointmentForm />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/login"
+          element={<AdminLogin setIsLoggedIn={setIsLoggedIn} />}
+        />
       </Routes>
     </Router>
   );

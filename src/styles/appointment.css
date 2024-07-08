@@ -57,6 +57,12 @@
   transition: all 0.3s;
 }
 
+.unique-form-container.move-up {
+  top:20%;
+  transition: transform 0.3s ease-in-out;
+}
+
+
 .unique-form-input-blocks {
   display: flex;
   flex-direction: row;
