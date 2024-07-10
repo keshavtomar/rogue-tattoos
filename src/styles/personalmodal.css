@@ -1,0 +1,35 @@
+.personal-modal * {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 500 !important;
+  font-style: normal;
+}
+
+.personal-modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(130, 130, 130, 0);
+  transition: all 0.45s ease-out;
+  z-index: -1;
+}
+
+
+.personal-modal-container {
+  height: fit-content;
+  transform: translateY(-100vh);
+  z-index: 7000;
+  border-radius: 5px;
+  background-color: rgb(66, 66, 66);
+  backdrop-filter: blur(10px);
+  width: 70%;
+  transition: all 0.45s ease-out;
+}
+
+.personal-modal-container * {
+  color: white;
+  text-transform: none;
+}

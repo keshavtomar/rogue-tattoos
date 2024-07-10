@@ -3,10 +3,12 @@ import "../styles/appointment.css";
 import { toast, ToastContainer } from "react-toastify";
 import TermsNConditions from "./TermsNConditions";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import PersonalModal from "./PersonalModal";
 
 export default function AppointmentForm() {
   const handle = useFullScreenHandle();
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [show, setshow] = useState(false);
   const formContainerRef = useRef(null);
 
   const [data, setData] = useState({
@@ -67,9 +69,6 @@ export default function AppointmentForm() {
     setIsFullScreen(state);
   };
 
- 
-
-
   return (
     <div>
       <button
@@ -92,6 +91,7 @@ export default function AppointmentForm() {
         />
       </button>
       <FullScreen handle={handle} onChange={handleFullScreenChange}>
+        <PersonalModal show={show} setShow={setshow} />
         <div className="appointment">
           <div className="background-container">
             <img
@@ -206,10 +206,15 @@ export default function AppointmentForm() {
                   />
                   <label htmlFor="unique-terms" style={{ display: "flex" }}>
                     <div style={{ margin: "auto 5px" }}>I agree to the</div>
-                    <TermsNConditions
-                      color="#a68954"
-                      fontFamily="'Montserrat', sans-serif"
-                    />
+                    <div
+                      id="personal-modal"
+                      onClick={() => {
+                        setshow(!show);
+                      }}
+                      style={{ cursor: "pointer", color:"#a68954" }}
+                    >
+                      Terms and Conditions
+                    </div>
                   </label>
                 </div>
                 <div className="unique-form-button">

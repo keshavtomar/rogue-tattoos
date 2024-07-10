@@ -17,6 +17,7 @@ function MyVerticallyCenteredModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
       style={{ backdropFilter: "blur(5px)", zIndex:"5000" }}
+      keepMounted
     >
       <Modal.Header closeButton style={{ backgroundColor: "#302e2e" }}>
         <Modal.Title id="contained-modal-title-vcenter" style={modalStyles}>
