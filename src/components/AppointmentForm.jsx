@@ -4,16 +4,33 @@ import { toast, ToastContainer } from "react-toastify";
 import TermsNConditions from "./TermsNConditions";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import PersonalModal from "./PersonalModal";
+import Flatpickr from "react-flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 
 export default function AppointmentForm() {
   const handle = useFullScreenHandle();
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [show, setshow] = useState(false);
+  const [termschecked, settermschecked] = useState(false);
   const formContainerRef = useRef(null);
+
+  const dayRef = useRef(null);
+  const monthRef = useRef(null);
+  const yearRef = useRef(null);
+
+  const moveToNext = (currentRef, nextRef) => {
+    if (currentRef.current.value.length >= currentRef.current.maxLength) {
+      nextRef.current.focus();
+    }
+  };
 
   const [data, setData] = useState({
     name: "",
-    dob: "",
+    dob: {
+      day: "",
+      month: "",
+      year: "",
+    },
     phone: "",
     selectedValue: "",
     date: "",
@@ -26,6 +43,15 @@ export default function AppointmentForm() {
     setData((prevState) => ({
       ...prevState,
       [name]: value,
+    }));
+  };
+
+  const handleDateChange = (e) => {
+    const { name, value } = e.target;
+    const prevdob = data.dob;
+    setData((prevState) => ({
+      ...prevState,
+      dob: { ...prevdob, [name]: value },
     }));
   };
 
@@ -51,11 +77,12 @@ export default function AppointmentForm() {
         toast.success("Submission Successfull");
         setData({
           name: "",
-          dob: "",
+          dob: { day: "", month: "", year: "" },
           phone: "",
           selectedValue: "",
           date: "",
         });
+        settermschecked(false);
       } else {
         toast.error("Something went wrong");
       }
@@ -63,6 +90,7 @@ export default function AppointmentForm() {
       toast.error("Something went wrong");
     }
     setLoading(false);
+    // console.log(data);
   };
 
   const handleFullScreenChange = (state) => {
@@ -141,15 +169,56 @@ export default function AppointmentForm() {
                       >
                         Birthday
                       </label>
-                      <input
-                        type="date"
-                        className="unique-form-input"
-                        id="unique-birthday"
-                        name="dob"
-                        value={data.dob}
-                        onChange={handleChange}
-                        required
-                      />
+                      <div>
+                        <input
+                          type="number"
+                          className="unique-form-input mr-2"
+                          id="unique-birthday"
+                          name="day"
+                          value={data.dob.day}
+                          onChange={handleDateChange}
+                          placeholder="DD"
+                          style={{ width: "50px" }}
+                          min="1"
+                          max="31"
+                          maxLength="2"
+                          ref={dayRef}
+                          onInput={() => moveToNext(dayRef, monthRef)}
+                          required
+                        />
+                        /
+                        <input
+                          type="number"
+                          className="unique-form-input mx-2"
+                          id="unique-birthday"
+                          name="month"
+                          value={data.dob.month}
+                          style={{ width: "50px" }}
+                          onChange={handleDateChange}
+                          placeholder="MM"
+                          min="1"
+                          max="12"
+                          maxLength="2"
+                          ref={monthRef}
+                          onInput={() => moveToNext(monthRef, yearRef)}
+                          required
+                        />
+                        /
+                        <input
+                          type="number"
+                          className="unique-form-input ml-2"
+                          id="unique-birthday"
+                          min="1930"
+                          max="2024"
+                          name="year"
+                          value={data.dob.year}
+                          style={{ width: "100px" }}
+                          onChange={handleDateChange}
+                          placeholder="YYYY"
+                          ref={yearRef}
+                          required
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="right-inputs">
@@ -175,7 +244,7 @@ export default function AppointmentForm() {
                         className="unique-form-label"
                         htmlFor="selectInput"
                       >
-                        How you know about us
+                        How you found us
                       </label>
                       <select
                         id="selectInput"
@@ -202,6 +271,10 @@ export default function AppointmentForm() {
                     type="checkbox"
                     id="unique-terms"
                     name="terms"
+                    checked={termschecked}
+                    onClick={() => {
+                      settermschecked(!termschecked);
+                    }}
                     required
                   />
                   <label htmlFor="unique-terms" style={{ display: "flex" }}>
@@ -211,7 +284,7 @@ export default function AppointmentForm() {
                       onClick={() => {
                         setshow(!show);
                       }}
-                      style={{ cursor: "pointer", color:"#a68954" }}
+                      style={{ cursor: "pointer", color: "#a68954" }}
                     >
                       Terms and Conditions
                     </div>

@@ -8,7 +8,7 @@ export default function PersonalModal({ show, setShow }) {
       className="personal-modal"
       style={
         show
-          ? { zIndex: "6000", backdropFilter:'blur(10px)' }
+          ? { zIndex: "10", backdropFilter:'blur(10px)' }
           : {}
       }
     //   onClick={() => {
@@ -17,7 +17,7 @@ export default function PersonalModal({ show, setShow }) {
     >
       <div
         className="personal-modal-container pt-5 px-4 pb-3"
-        style={show ? { translate: "0 100vh", backdropFilter:"blur(0px)" } : {}}
+        style={show ? { translate: "0 30px", backdropFilter:"blur(0px)", opacity:'1' } : {}}
         onClick={(e)=>{e.preventDefault()}}
       >
         <img

@@ -288,3 +288,15 @@
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: white;
 }
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Remove the spin buttons in Webkit browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
