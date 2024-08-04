@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///D:/Web%20Development/satyam%20project/index.htm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Receipt</title>
+    <link rel="stylesheet" href="./Bill Receipt_files/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i>GLOBAL INTEGRATIVE SOLUTIONS PRIVATE LIMITED</i></h1>
+            <p>CIN NO: U73100DL2013PTC247319</p>
+            <p>H.NO - 246, Ramjaipal Nagar, Varun Colony, Gola Road</p>
+            <p>Danapur, Patna, Bihar </p>
+            <p>Email: asmitkumar2008@gmail.com</p>
+            <p>Mobile: 9472642776, 9631481</p>
+        </div>
+        <table>
+            <tbody><tr>
+              <td>Cell</td>
+              <td style="
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+">
+                <table>
+                  <tbody><tr>
+                    <td>Cell 1</td>
+                  </tr>
+                  <tr>
+                    <td>Cell 2</td>
+                  </tr>
+                  <tr>
+                    <td>Cell 3</td>
+                  </tr>
+                  <tr>
+                    <td>Cell 4</td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+        <div class="content">
+            <p>Respected Sir,</p>
+            <p><textarea id="content">As per our DPR, we are producing these rates for various works to be executed at Dibrugar site.</textarea></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>SI No.</th>
+                        <th>Item Description</th>
+                        <th>UoM</th>
+                        <th>Rate per UoM (₹)</th>
+                        <th>Quantity</th>
+                        <th>Total (₹)</th>
+                        <th class="no-print">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="bill-items">
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" class="description"></td>
+                        <td><input type="text" class="uom"></td>
+                        <td><input type="number" class="rate" oninput="calculateTotal()"></td>
+                        <td><input type="number" class="quantity" oninput="calculateTotal()"></td>
+                        <td class="total">0 ₹</td>
+                        <td class="no-print"><button onclick="removeRow(this)">Remove</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">Subtotal:</td>
+                        <td id="subtotal">0 ₹</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Add: 18% GST:</td>
+                        <td id="gst">0 ₹</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Total:</td>
+                        <td id="total">0 ₹</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="no-print" onclick="addRow()">Add Item</button>
+        </div>
+        <div class="footer right-align">
+            <p>Thank you,</p>
+            <p>Global Integrative Solutions Pvt. Ltd.</p>
+            <p>Director</p>
+        </div>
+        <button class="no-print" onclick="printBill()">Print as PDF</button>
+    </div>
+    <script src="./Bill Receipt_files/script.js.download"></script>
+
+
+</body></html>

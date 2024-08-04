@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header, .to-section, .subject-section, .content, .footer {
+    margin-bottom: 20px;
+}
+.header{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header h1, .subject-section p, .content p {
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #000;
+}
+
+.to-section p, .to-section input, .subject-section p, .subject-section input, .content p, .content textarea {
+    display: inline;
+    margin: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding: 0;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    padding: 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+textarea {
+    height: 60px;
+}
+
+.right-align {
+    text-align: right;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+    .footer {
+        text-align: right;
+    }
+}

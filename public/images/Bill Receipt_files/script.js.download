@@ -1,0 +1,54 @@
+function calculateTotal() {
+    const rows = document.querySelectorAll('#bill-items tr');
+    let subtotal = 0;
+
+    rows.forEach((row, index) => {
+        const rate = parseFloat(row.querySelector('.rate').value) || 0;
+        const quantity = parseFloat(row.querySelector('.quantity').value) || 0;
+        const totalCell = row.querySelector('.total');
+        const total = rate * quantity;
+        totalCell.textContent = total ? `${total.toLocaleString()} ₹` : '0 ₹';
+        subtotal += total;
+    });
+
+    const gst = subtotal * 0.18;
+    const total = subtotal + gst;
+
+    document.getElementById('subtotal').textContent = `${subtotal.toLocaleString()} ₹`;
+    document.getElementById('gst').textContent = `${gst.toLocaleString()} ₹`;
+    document.getElementById('total').textContent = `${total.toLocaleString()} ₹`;
+}
+
+function addRow() {
+    const table = document.getElementById('bill-items');
+    const rowCount = table.rows.length + 1;
+    const row = table.insertRow();
+
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+    const cell3 = row.insertCell(2);
+    const cell4 = row.insertCell(3);
+    const cell5 = row.insertCell(4);
+    const cell6 = row.insertCell(5);
+    const cell7 = row.insertCell(6);
+
+    cell1.textContent = rowCount;
+    cell2.innerHTML = '<input type="text" class="description">';
+    cell3.innerHTML = '<input type="text" class="uom">';
+    cell4.innerHTML = '<input type="number" class="rate" oninput="calculateTotal()">';
+    cell5.innerHTML = '<input type="number" class="quantity" oninput="calculateTotal()">';
+    cell6.className = 'total';
+    cell6.textContent = '0 ₹';
+    cell7.className = 'no-print';
+    cell7.innerHTML = '<button onclick="removeRow(this)">Remove</button>';
+}
+
+function removeRow(button) {
+    const row = button.closest('tr');
+    row.remove();
+    calculateTotal();
+}
+
+function printBill() {
+    window.print();
+}

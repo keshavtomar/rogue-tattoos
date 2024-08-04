@@ -54,7 +54,12 @@ export default function Counter() {
             let duration = Math.floor(interval / endValue);
             let coounter = setInterval(function () {
 
-                startValue += 1;
+                if(index!==3){
+                    startValue+=10;
+                }
+                else{
+                    startValue+=1;
+                }
 
                 valueDisplay.textContent = startValue;
                 if (startValue === endValue) {
