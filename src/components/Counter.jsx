@@ -57,6 +57,9 @@ export default function Counter() {
                 if(index!==3){
                     startValue+=10;
                 }
+                else if(index===2){
+                    startValue+=2;
+                }
                 else{
                     startValue+=1;
                 }
@@ -95,7 +98,7 @@ export default function Counter() {
                 <div className='ccontainer fly-hidden'>
                     <StarBorderPurple500Icon className='ci' fontSize='large' />
                     <div style={{ 'textAlign': 'center' }}>
-                        <span className='cnum' data-val='130'>0</span>
+                        <span className='cnum' data-val='140'>0</span>
                         <span className='xnum'>+</span>
                     </div>
                     <span className='ctext'>5 ★ Ratings on Google</span>
