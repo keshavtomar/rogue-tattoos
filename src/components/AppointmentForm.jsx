@@ -57,6 +57,10 @@ export default function AppointmentForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(data.name[0]===' '){
+      alert("Your name should start with a letter, please remove space before your name");
+      return;
+    }
     setLoading(true);
     const date = new Date();
     const updatedData = { ...data, date: date.toISOString() };
