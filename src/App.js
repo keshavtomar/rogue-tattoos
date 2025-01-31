@@ -19,6 +19,9 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/getstarted" element={<Getstartedform />} />
         <Route path="/appointment" element={<AppointmentForm />} />
+        <Route path="/visiting-card" element={<div
+        style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", width: "100vw", color: "white", fontSize: "2rem", backgroundColor: "#141d26"}}
+        >This page is under Development (expected 7 days)</div>}/>
         <Route
           path="/admin"
           element={

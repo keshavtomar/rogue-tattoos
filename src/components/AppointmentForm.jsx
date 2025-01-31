@@ -1,10 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/appointment.css";
 import { toast, ToastContainer } from "react-toastify";
-import TermsNConditions from "./TermsNConditions";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import PersonalModal from "./PersonalModal";
-import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
 export default function AppointmentForm() {
@@ -68,7 +66,6 @@ export default function AppointmentForm() {
     try {
       const response = await fetch(
         `https://rogue-tattoos-api.onrender.com/appointment`,
-        // `http://localhost:5001/appointment`,
         {
           method: "POST",
           headers: {
