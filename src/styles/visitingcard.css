@@ -1,8 +1,12 @@
+header{
+    position: fixed;
+}
+
 .visiting-card-screen {
   background: linear-gradient(-45deg, #b84c2b, #c62f69, #187da2, #20a761);
   background-size: 400% 400%;
   animation: gradient 12s ease infinite;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +15,7 @@
   font-style: normal;
   font-size: large;
   color: white;
+  overscroll-behavior: none;
 }
 
 @keyframes gradient {
@@ -27,8 +32,8 @@
 
 .visiting-card-container {
   width: 80vw;
-  height: 90vh;
-  /* border: 1px solid; */
+  height: 75vh;
+  border: 0.5px solid;
   border-radius: 30px;
   overflow: hidden;
   position: relative;
@@ -80,12 +85,12 @@
 }
 
 .toggling-content.show1 {
-  height: 60px;
+  height: 80px;
   transform: scaleY(1);
 }
 
 .toggling-content.show2 {
-  height: 80px;
+  height: 125px;
   transform: scaleY(1);
 }
 
@@ -103,10 +108,19 @@
 }
 
 .vc-link > a {
-  text-decoration: none;
+  text-decoration: dashed;
   color: white;
+  margin: 8px auto;
 }
 
 .show-different {
   transform: rotate(-90deg);
+}
+
+.vc-single-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  margin: auto 2px;
 }

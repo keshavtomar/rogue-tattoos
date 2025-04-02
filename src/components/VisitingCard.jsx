@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../styles/visitingcard.css";
 
 export default function VisitingCard() {
-  const [isContactOpen, setIsContactOpen] = useState(true);
-  const [isAddressOpen, setIsAddressOpen] = useState(true);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isAddressOpen, setIsAddressOpen] = useState(false);
   const [isAppointmentOpen, setIsAppointmentOpen] = useState(false);
 
   const handleContactOpen = () => {
@@ -47,16 +47,45 @@ export default function VisitingCard() {
               <div className={`toggling-content ${isContactOpen && "show1"}`}>
                 <div style={{ opacity: "90%" }}>
                   <div className="vc-link">
-                    <a href="tel:+919971947774">+919971947774</a>
+                    <a href="tel:+919971947774" className="vc-single-link">
+                      <div className="vvv">
+                        <img
+                          width={20}
+                          src="../../images/vc-phone.svg"
+                          alt="phone"
+                        />
+                      </div>
+                      <div style={{ margin: "auto 4px" }}>+919971947774</div>
+                    </a>
                   </div>
                   <div className="vc-link">
-                    <a href="mailto:theroguetattoos@gmail.com">
-                      theroguetattoos@gmail.com
+                    <a
+                      href="mailto:theroguetattoos@gmail.com"
+                      className="vc-single-link"
+                    >
+                      <div className="vvv">
+                        <img
+                          width={20}
+                          src="../../images/vc-mail.svg"
+                          alt="mail"
+                        />
+                      </div>
+                      <div style={{ margin: "auto 4px" }}>
+                        theroguetattoos@gmail.com
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+            <hr
+              style={{
+                borderTop: "1px solid white",
+                borderBottom: "none",
+                borderLeft: "none",
+                borderRight: "none",
+              }}
+            />
             <div className="visiting-card-section visiting-card-section2">
               <div style={{ cursor: "pointer" }} onClick={handleAddressOpen}>
                 Address
@@ -73,27 +102,62 @@ export default function VisitingCard() {
               <div className={`toggling-content ${isAddressOpen && "show2"}`}>
                 <div style={{ opacity: "90%" }}>
                   <div className="vc-link">
-                    <a href="https://maps.app.goo.gl/KqHWHfnA4sGWdUNfA">
-                      B- 1/18- B Paschim Vihar, New Delhi, Pin-code : 110063
+                    <a
+                      href="https://maps.app.goo.gl/KqHWHfnA4sGWdUNfA"
+                      className="vc-single-link"
+                    >
+                      <div className="vvv">
+                        <img
+                          width={20}
+                          src="../../images/vc-location.svg"
+                          alt="locate"
+                        />
+                      </div>
+                      <div style={{ margin: "auto 4px" }}>
+                        B1/18- B Paschim Vihar, New Delhi, Pin-code : 110063
+                      </div>
                     </a>
                   </div>
                 </div>
                 <div style={{ opacity: "90%" }}>
                   <div className="vc-link">
-                    <a href="https://maps.app.goo.gl/KqHWHfnA4sGWdUNfA">
-                      Review Us
+                    <a
+                      href="https://maps.app.goo.gl/KqHWHfnA4sGWdUNfA"
+                      className="vc-single-link"
+                    >
+                      <div className="vvv">
+                        <img
+                          width={20}
+                          src="../../images/vc-review.svg"
+                          alt="locate"
+                        />
+                      </div>
+                      <div style={{ margin: "auto 4px" }}>
+                        Review Us
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+            <hr
+              style={{
+                borderTop: "1px solid white",
+                borderBottom: "none",
+                borderLeft: "none",
+                borderRight: "none",
+              }}
+            />
+
             <div className="visiting-card-section visiting-card-section3">
               <div
                 style={{ cursor: "pointer" }}
                 onClick={handleAppointmentOpen}
-                className="vc-link"
               >
-                <a href="https://www.roguetattoos.in/getstarted">
+                <a
+                  href="https://www.roguetattoos.in/getstarted"
+                  style={{ textDecoration: "underline", color: "white" }}
+                >
                   Appointment
                   <img
                     src="../../images/toggleDown.svg"
