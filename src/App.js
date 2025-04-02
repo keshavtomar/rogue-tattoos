@@ -8,6 +8,7 @@ import AppointmentForm from "./components/AppointmentForm";
 import Admin from "./components/Admin";
 import AdminLogin from "./components/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
+import VisitingCard from "./components/VisitingCard";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -19,9 +20,12 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/getstarted" element={<Getstartedform />} />
         <Route path="/appointment" element={<AppointmentForm />} />
-        <Route path="/vc" element={<div
-        style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", width: "100vw", color: "white", fontSize: "2rem", backgroundColor: "#141d26"}}
-        >This page is under maintainence (expected redeploy - 10 feb 25 )</div>}/>
+        <Route
+          path="/vc"
+          element={
+            <VisitingCard/>
+          }
+        />
         <Route
           path="/admin"
           element={
