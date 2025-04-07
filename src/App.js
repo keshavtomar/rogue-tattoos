@@ -8,7 +8,7 @@ import AppointmentForm from "./components/AppointmentForm";
 import Admin from "./components/Admin";
 import AdminLogin from "./components/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
-import VisitingCard from "./components/VisitingCard";
+import VisitingCard2 from "./components/VisitingCard2";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,12 +20,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/getstarted" element={<Getstartedform />} />
         <Route path="/appointment" element={<AppointmentForm />} />
-        <Route
-          path="/vc"
-          element={
-            <VisitingCard/>
-          }
-        />
+        <Route path="/vc" element={<VisitingCard2 />} />
         <Route
           path="/admin"
           element={
