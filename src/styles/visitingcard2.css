@@ -187,3 +187,16 @@
   object-fit: contain;
   overflow: hidden;
 }
+.vc-single-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  margin: auto 2px;
+}
+
+.vc-link > a {
+  text-decoration: dashed;
+  color: white;
+  margin: 8px auto;
+}
